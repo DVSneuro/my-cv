@@ -1,0 +1,298 @@
+%------------------------------------
+% Dario Taraborelli
+% Typesetting your academic CV in LaTeX
+%
+% URL: http://nitens.org/taraborelli/cvtex
+% DISCLAIMER: This template is provided for free and without any guarantee 
+% that it will correctly compile on your system if you have a non-standard  
+% configuration.
+% Some rights reserved: http://creativecommons.org/licenses/by-sa/3.0/
+%
+% Adapted from https://github.com/dartar/cvtex
+% by David V. Smith
+%------------------------------------
+
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[11pt, letterpaper]{article}
+\usepackage{xunicode,fontspec,xltxtra} 
+\usepackage{libertine} 
+
+% DOCUMENT LAYOUT
+\usepackage{geometry} 
+\geometry{letterpaper, textwidth=5.5in, textheight=8.5in, marginparsep=7pt, marginparwidth=.6in}
+\setlength\parindent{0in}
+
+% FONTS
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{xunicode}
+\usepackage{xltxtra}
+\defaultfontfeatures{Mapping=tex-text}
+%\setromanfont [Ligatures={Common}, Numbers={OldStyle}, Variant=01]{Linux Libertine O}
+%\setmonofont[Scale=0.8]{Monaco}
+
+% ---- CUSTOM COMMANDS
+\chardef\&="E050
+\newcommand{\html}[1]{\href{#1}{\scriptsize\textsc{[html]}}}
+\newcommand{\pdf}[1]{\href{#1}{\scriptsize\textsc{[pdf]}}}
+\newcommand{\doi}[1]{\href{#1}{\scriptsize\textsc{[doi]}}}
+
+% ---- MARGIN YEARS
+\usepackage{marginnote}
+\newcommand{\amper{}}{\chardef\amper="E0BD }
+\newcommand{\years}[1]{\marginnote{\scriptsize #1}}
+\renewcommand*{\raggedleftmarginnote}{}
+\setlength{\marginparsep}{7pt}
+\reversemarginpar
+
+% HEADINGS
+\usepackage{sectsty} 
+\usepackage[normalem]{ulem} 
+\sectionfont{\mdseries\upshape\Large}
+\subsectionfont{\mdseries\scshape\normalsize} 
+\subsubsectionfont{\mdseries\upshape\large} 
+
+% PDF SETUP
+% ---- FILL IN HERE THE DOC TITLE AND AUTHOR
+\usepackage[driverfallback=dvipdfm, bookmarks, colorlinks, breaklinks, 
+% ---- FILL IN HERE THE TITLE AND AUTHOR
+	pdftitle={David V. Smith - vita},
+	pdfauthor={David V. Smith},
+	pdfproducer={http://nitens.org/taraborelli/cvtex}
+]{hyperref}  
+\hypersetup{linkcolor=blue,citecolor=blue,filecolor=black,urlcolor=MidnightBlue} 
+
+% IMPORT OTHER PACKAGES, INCLUDING PYTHONTEX
+\usepackage{amsmath,amssymb}
+\usepackage{fullpage}
+\usepackage{graphicx}
+\usepackage[svgnames]{xcolor}
+\usepackage{url}
+\urlstyle{same}
+\usepackage{academicons}
+\usepackage{hanging}
+
+%\defaultfontfeatures{Path = /usr/local/texlive/2017/texmf-dist/fonts/opentype/public/fontawesome/ }
+\defaultfontfeatures{Extension = .otf}
+\usepackage{fontawesome}
+
+
+\usepackage[makestderr]{pythontex}
+\restartpythontexsession{\thesection}
+
+
+\usepackage[framemethod=TikZ]{mdframed}
+
+\newcommand{\pytex}{Python\TeX}
+\renewcommand*{\thefootnote}{\fnsymbol{footnote}}
+
+
+% START DOCUMENT
+\begin{document}
+{\LARGE David Victor Smith}\\[1cm]
+\begin{tabbing}
+Assistant Professor \hspace{1.75in} \= \aiGoogleScholar \hspace{.2cm} \href{https://scholar.google.com/citations?user=czV7OcQAAAAJ&hl=en}{scholar.google.com} \\ 
+Department of Psychology \> \aiResearchGate \hspace{.2cm} \href{https://www.researchgate.net/profile/David_Smith96/}{researchgate.net} \\
+Temple University \> \faGithub \hspace{.2cm}  \href{https://github.com/DVS-Lab/}{github.com/DVS-Lab} \\
+825 Weiss Hall \> \aiOrcid \hspace{.2cm}  \href{https://orcid.org/0000-0001-5754-9633}{orcid.org/0000-0001-5754-9633} \\
+1701 North 13th Street \>  \aiPublons \hspace{.2cm} \href{https://publons.com/author/1204254/david-v-smith}{publons.com} \\
+Philadelphia, PA, 19122 \> \aiOSF \hspace{.2cm} \href{https://osf.io/5zq6h/}{osf.io/} \\[.2cm]
+phone: 215-204-1552  \> \faTwitter \hspace{.2cm} \href{https://twitter.com/DVSneuro}{twitter.com/DVSneuro} \\
+email: \href{mailto:david.v.smith@temple.edu}{david.v.smith@temple.edu} \> \faUniversity \hspace{.2cm} \href{https://sites.temple.edu/neuroeconlab/}{sites.temple.edu/neuroeconlab}\\ 
+ \end{tabbing}
+
+%\faInstitution
+%\faLinux
+%\faLink
+%\faUniversity
+ 
+%https://osf.io/5zq6h/
+%https://twitter.com/DVSneuro
+%https://github.com/DVS-Lab
+%https://sites.temple.edu/neuroeconlab/
+%https://orcid.org/0000-0001-5754-9633
+%https://publons.com/author/1204254/david-v-smith
+%http://www.researcherid.com/rid/A-5487-2011
+%https://www.researchgate.net/profile/David_Smith96
+
+
+%%\hrule
+\section*{Professional Experience}
+%\noindent
+\begin{tabbing}
+\years{2017-present} \textsc{Temple University} \hspace{.75in} \= \textit{Assistant Professor}, Department of Psychology \\[.2cm]
+\years{2012-2016} \textsc{Rutgers University} \> \textit{Postdoctoral Fellow}, Department of Psychology \\[.2cm]
+\years{2006-2012} \textsc{Duke University} \> \textit{Graduate Student}, Department of Psychology \\[.2cm]
+ \end{tabbing}
+
+%\hrule
+\section*{Education}
+\noindent
+\years{2012}\textsc{PhD} in Psychology \& Neuroscience, Duke University\\
+\years{2006}\textsc{BS} in Experimental Psychology, University of South Carolina
+
+%\hrule
+\section*{Honors \& Awards}
+\noindent
+\years{2016}Rising Star, Association for Psychological Science\\
+\years{2016}Young Investigator Travel Award, NIDA Symposium on Persistent Maladaptive Behaviors\\
+\years{2016}NIDA Director’s Travel Award, The College on Problems of Drug Dependence\\
+\years{2015}Ruth L. Kirschstein Postdoctoral National Research Service Award, NIMH\\
+\years{2015}Merit Abstract Award, Organization for Human Brain Mapping\\
+\years{2015}Travel Award, Scientific Research Network on Decision Neuroscience \& Aging\\
+\years{2009}Ruth L. Kirschstein Predoctoral National Research Service Award, NIMH\\
+\years{2010}Travel Award, Organization for Human Brain Mapping\\
+\years{2009}Fellow, Summer Institute in Cognitive Neuroscience, UC - Santa Barbara\\
+\years{2008}Fellow, CIT Flexible Learning Space, Duke University\\
+\years{2007}Travel Award, Organization for Human Brain Mapping\\
+\years{2006}Roger Black Award for Psychological Research, University of South Carolina\\
+\years{2005}Phi Beta Kappa, University of South Carolina\\
+\years{2005}Fellow, NSF Summer Research Institute, University of South Carolina\\
+\years{2005}Stubbs Scholar, University of South Carolina\\
+\years{2004}Phi Beta Kappa Freshman Scholar Award, University of South Carolina\\
+\years{2004}Baroody Scholar Award, University of South Carolina\\
+\years{2003}Abney Scholar, University of South Carolina\\
+\years{2002}LIFE Scholarship, University of South Carolina\\
+
+\section*{Publications}
+[Google Scholar h-index: 16 (i10-index: 21; total citations: 1116)] \\ [.2cm]
+*shared first authorship\\ [.2cm]
+Relative Citation Ratio (\textsc{RCR})
+
+\subsection*{Original Research Articles}
+
+% Function for extracting RCR
+\begin{pycode}
+import requests
+def get_rcr(pmid):
+    response = requests.get("/".join(["https://icite.od.nih.gov/api","pubs",str(pmid)]))
+    pub = response.json()
+    return pub['relative_citation_ratio']
+\end{pycode}
+
+\begin{hangparas}{.25in}{1}
+
+
+
+24. Utevsky AV, \textbf{Smith DV}, Young JS, Huettel SA (2017). Large-Scale Network Coupling with the Fusiform Cortex Future Social Motivation. \textit{eNeuro}, 4(5): ENEURO.0084-17.2017. RCR = \py{get_rcr(29034316)}
+
+23. Li R*, \textbf{Smith DV}*, Clithero JA, Venkatraman V, Carter RM, Huettel SA (2017). Reason’s Enemy is Not Emotion: Engagement of Cognitive Control Networks Explain Biases in Gain/Loss Framing. \textit{Journal of Neuroscience}, 37 (13) 3588-3598. RCR = \py{get_rcr(28264981)}
+
+22. Cho C, \textbf{Smith DV}, Delgado MR (2016). Reward Sensitivity Enhances Ventrolateral Prefrontal Cortex Activation During Free Choice. \textit{Frontiers in Neuroscience}, 10:529. RCR = \py{get_rcr(27917106)}
+
+21. \textbf{Smith DV}, Gseir M, Speer ME, Delgado MR (2016). Toward a Cumulative Science of Functional Integration: a Meta-Analysis of Psychophysiological Interactions. \textit{Human Brain Mapping}, 37(8), 2904-17. RCR = \py{get_rcr(27145472)}
+
+20. \textbf{Smith DV}, Rigney AE, Delgado MR (2016). Distinct Reward Properties are Encoded via Corticostriatal Interactions. \textit{Scientific Reports}, 6, 20093. RCR = \py{get_rcr(26831208)}
+
+19. \textbf{Smith DV}*, Sip KE*, Delgado MR (2015). Functional Connectivity with Distinct Neural Networks Tracks Fluctuations in Gain/Loss Framing Susceptibility. Human Brain Mapping, 36(7), 2743-55. RCR = \py{get_rcr(25858445)}
+
+18. Young JS*, \textbf{Smith DV}*, Coutlee CG, Huettel SA (2015). Synchrony Between Sensory and Cognitive Networks is Associated with Subclinical Variation in Autistic Traits. Frontiers in Human Neuroscience, 9:146. PMCID: PMC4369640
+
+17. Sip KE, \textbf{Smith DV}, Porcelli AJ, Kar K, Delgado MR (2015). Social Closeness and Feedback Modulate Susceptibility to the Framing Effect. Social Neuroscience, 10(1), 35-45. PMCID: PMC4250444
+
+16. Murty VP, Shermohammed M, \textbf{Smith DV}, Carter RM, Huettel SA, Adcock RA (2014). Resting State Networks Distinguish Human Ventral Tegmental Area from Substantia Nigra. NeuroImage, 100(1), 580-589. PMCID: PMC4370842
+
+15. \textbf{Smith DV}, Utevsky AV, Bland AR, Clement NJ, Clithero JA, Harsch AE, Carter RM, Huettel SA (2014). Characterizing Individual Differences in Functional Connectivity Using Dual-Regression and Seed-Based Approaches. NeuroImage, 95(1), 1-12. PMCID: PMC4074548
+
+14. \textbf{Smith DV}, Clithero JA, Boltuck SE, Huettel SA (2014). Functional Connectivity with Ventromedial Prefrontal Cortex Reflects Subjective Value for Social Rewards. \textit{Social Cognitive and Affective Neuroscience}, 9(12), 2017-2025. \textsc{RCR} = \py{get_rcr(24493836)}
+
+13. Utevsky AV, \textbf{Smith DV}, Huettel SA (2014). Precuneus is a Functional Core of the Default-Mode Network. Journal of Neuroscience, 34(3), 932-940. PMCID: PMC3891968
+
+12. Strauman TJ, Detloff AM, Sestokas R, \textbf{Smith DV}, Goetz EL, Rivera C, Kwapil L (2013). What Shall I Be, What Must I Be: Neural Correlates of Personal Goal Activation. Frontiers in Integrative Neuroscience, 6:123. PMCID: PMC3539852
+
+11. \textbf{Smith DV}, Clithero JA, Rorden C, Karnath H-O (2013). Decoding the Anatomical Network of Spatial Attention. \textit{Proceedings of the National Academy of Sciences of the USA}, 110(4), 1518-1523. RCR = \py{get_rcr(23300283)}
+
+10. Jelsone-Swain L, \textbf{Smith DV}, Baylis GC (2012). The Effect of Stimulus Duration and Motor Response in Hemispatial Neglect During a Visual Search Task. \textit{PLoS ONE}, 7(5), e37369. PMCID: PMC3360686
+
+9. Libedinsky C, \textbf{Smith DV}, Teng CS, Namburi P, Chen V, Huettel SA, Chee MLW (2011). Sleep Deprivation Alters Valuation Signals in the Ventromedial Prefrontal Cortex. \textit{Frontiers in Behavioral Neuroscience}, 5:70. PMCID: PMC3199544
+
+8. Clithero JA, Reeck CC, Carter RM, \textbf{Smith DV}, Huettel SA (2011). Nucleus Accumbens Mediates Relative Motivation for Rewards in the Absence of Choice. \textit{Frontiers in Human Neuroscience}, 5:87. PMCID: PMC3171065
+
+7. Appelbaum LG, \textbf{Smith DV}, Boehler CN, Wen C, Woldorff MG (2011). Rapid Modulation of Sensory Processing Induced by Stimulus Conflict. \textit{Journal of Cognitive Neuroscience}, 23(9), 2620-2628. PMCID: PMC3096678
+
+6. Clithero JA, \textbf{Smith DV}, Carter RM, Huettel SA (2011). Within- and Cross-Participant Classifiers Reveal Different Neural Coding of Information. \textit{NeuroImage}, 56(2), 699-708. PMCID: PMC2908207
+
+5. Hayden BY, \textbf{Smith DV}, Platt ML (2010). Cognitive Control Signals in Posterior Cingulate Cortex. \textit{Frontiers in Human Neuroscience}, 4:223. PMCID: PMC3001991
+
+4. \textbf{Smith DV}, Davis B, Niu K, Healy E, Bonilha L, Fridriksson J, Morgan P, Rorden C (2010). Spatial Attention Evokes Similar Activation Patterns for Visual and Auditory Stimuli. \textit{Journal of Cognitive Neuroscience}, 22(2), 347-361. PMCID: PMC2846529
+
+3. \textbf{Smith DV}, Hayden BY, Truong T-K, Song AW, Platt ML, Huettel SA (2010). Distinct Value Signals in Anterior and Posterior Ventromedial Prefrontal Cortex. \textit{Journal of Neuroscience}, 30(7), 2490-2495. PMCID: PMC2856318
+
+2. Hayden BY, \textbf{Smith DV}, Platt ML (2009). Electrophysiological Correlates of Default-Mode Processing in Macaque Posterior Cingulate Cortex. \textit{Proceedings of the National Academy of Sciences of the USA}, 106(14), 5948-5953. PMCID: PMC2667004
+
+1. Almor A, \textbf{Smith DV}, Bonilha L, Fridriksson J, Rorden C (2007). What is in a Name? Spatial Brain Circuits are Used to Track Discourse References. \textit{Neuroreport}, 18(12), 1215-1219. PMCID: Not Available \\
+
+\end{hangparas}
+
+
+\subsection*{Reviews, Chapters, and Commentaries}
+
+\begin{hangparas}{.25in}{1}
+
+10. \textbf{Smith DV} \& Delgado MR (2017). Meta-Analysis of Psychophysiological Interactions: Revisiting Cluster-Level Thresholding and Sample Sizes. \textit{Human Brain Mapping}, 38(1), 588-591. PMCID: PMC5148685
+
+9. Bhanji JP, \textbf{Smith DV}, Delgado MR (2016). A Brief Anatomical Sketch of Human Ventromedial Prefrontal Cortex. [Supplementary Note 1 for Delgado et al. (2016). Nature Neuroscience, 19(12), 1545-1552]. RCR = None
+
+8. Wang KS, \textbf{Smith DV}, Delgado MR (2016). Using fMRI to Study Reward Processing in Humans: Past, Present, and Future. \textit{Journal of Neurophysiology}, 115, 1664-1678. PMCID: PMC4808130
+
+7. \textbf{Smith DV} \& Delgado MR (2015). Social Nudges: Utility Conferred from Others. \textit{Nature Neuroscience}, 18(6), 791-792. PMCID: Not Available
+
+6. \textbf{Smith DV} \& Delgado MR (2015). Reward Processing. In A. W. Toga (Ed.), \textit{Brain Mapping: An Encyclopedic Reference} (1st ed., pp. 361-366). Waltham, MA: Academic Press. RCR = None
+
+5. Karnath H-O \& \textbf{Smith DV} (2014). The Next Step in Modern Brain Lesion Analysis: Multivariate Pattern Analysis. \textit{Brain}, 137(9), 2405-2407. PMCID: Not Available
+
+4. Bland AR, Mushtaq F, \textbf{Smith DV} (2011). Exploiting Trial-to-Trial Variability in Multimodal Experiments. \textit{Frontiers in Human Neuroscience}, 5:80. PMCID: PMC3155870
+
+3. \textbf{Smith DV} \& Huettel SA (2010). Decision Neuroscience: Neuroeconomics. \textit{Wiley Interdisciplinary Reviews: Cognitive Science}, 1(6), 854-871. PMCID: PMC3384699
+
+2. \textbf{Smith DV} \& Clithero JA (2009). Manipulating Executive Function with Transcranial Direct Current Stimulation. \textit{Frontiers in Integrative Neuroscience}, 3:26. PMCID: PMC2764379
+
+1.  Clithero JA \& \textbf{Smith DV} (2009). Reference and Preference: How Does the Brain Scale Subjective Value? \textit{Frontiers in Human Neuroscience}, 3:11. PMCID: PMC2715285
+
+
+\end{hangparas}
+
+
+\subsection*{Manuscripts in Preparation or Under Review}
+
+\begin{hangparas}{.25in}{1}
+
+Wang S*, Taren AA*, \textbf{Smith DV} (under review). Functional Parcellation of the Default Mode Network: A Large-Scale Meta-Analysis. \aibioRxiv \hspace{.2cm} \href{https://www.biorxiv.org/content/early/2017/11/27/225375}{preprint} 
+
+\textbf{Smith DV}, Kragel PA, Clithero JA, Revill KP, Rorden C, Huettel SA, Carter RM (in prep). Medial-Lateral Gradient within the Human Striatum Decodes Social Rewards.
+
+\textbf{Smith DV}, Clithero JA, Delgado MR, Huettel SA (in prep). Parsing Reward: Spatiotemporal Analysis Reveals Distinct Striatal Responses to Reward.
+
+Lewis AH, \textbf{Smith DV}, Manglani H, Delgado MR (in prep). Neural Activation and Functional Connectivity During Extinction Learning with Appetitive and Aversive Conditioned Stimuli.
+
+Kim ES, Wang KS, \textbf{Smith DV}, Speer ME, Delgado MR (in prep). Neural Correlates of Self-Evaluation Enhancement and Dishonest Decisions.
+
+\textbf{Smith DV}, Wang KS, Delgado MR (in prep). Distinct Spatiotemporal Patterns within the Human Striatum Distinguish Reward and Punishment.
+
+Dobryakova E \& \textbf{Smith DV} (in prep). Reward Enhances Connectivity between the Ventral Striatum and the Default Mode Network.
+
+\end{hangparas}
+
+
+\section*{Teaching}
+
+...
+
+%\hrule
+\section*{Service to the profession}
+
+...
+%\vspace{1cm}
+\vfill{}
+%\hrulefill
+
+\begin{center}
+{\scriptsize  Last updated: \today\- •\- 
+% ---- PLEASE LEAVE THIS BACKLINK FOR ATTRIBUTION AS PER CC-LICENSE
+Typeset in \href{http://nitens.org/taraborelli/cvtex}{\XeTeX }\\
+% ---- FILL IN THE FULL URL TO YOUR CV HERE
+\href{https://sites.temple.edu/neuroeconlab/files/2017/03/SmithDV_vita.pdf}{https://sites.temple.edu/neuroeconlab/files/2017/03/SmithDV\_vita.pdf}}
+\end{center}
+
+\end{document}
