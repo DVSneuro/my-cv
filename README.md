@@ -1,5 +1,5 @@
 # My CV in Latex
-This is my CV in LaTeX. I am new to LaTeX, but it offers some nice typesetting options and automation features for plain text documents.
+This is my CV in LaTeX. I am new to LaTeX, but I use it here because it offers some nice typesetting options and automation features for plain text documents.
 
 You can also integrate LaTeX with Python via [PythonTex package][pythontex]. This package is super helpful for executing Python code within your LaTeX document. In my case, I used PythonTex to query the NIH web API for the [iCite Database][rcr-nih] containing the Relative Citation Ratio (RCR) for papers in PubMed. The RCR is a new citation metric that quantifies an article's influence relative to articles in its field. The authors of the RCR delineate an article's field using its co-citation network. For more details, see the original paper in [PLoS Biology][rcr-pub].
 
@@ -7,7 +7,7 @@ There are a few packages for creating CVs/resumes in LaTeX, but I opted for a te
 
 Steps for compiling:
 1) xelatex smith_cv.tex
-2) pthontex smith_cv.tex
+2) pythontex smith_cv.tex
 3) xelatex smith_cv.tex
 
 Please note that this work is licensed under a [CC BY-SA 3.0 License][cc-sa].
