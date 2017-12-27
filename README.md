@@ -1,26 +1,24 @@
 # My CV in Latex
-This is my CV in LaTeX, with auto-calculation of relative citation ratio.
+This is my CV in LaTeX. I am new to LaTeX, but it offers some nice typesetting options and automation features for plain text documents.
 
+You can also integrate LaTeX with Python via [PythonTex package][pythontex]. This package is super helpful for executing Python code within your LaTeX document. In my case, I used PythonTex to query the NIH web API for the [iCite Database][rcr-nih] containing the Relative Citation Ratio (RCR) for papers in PubMed. The RCR is a new citation metric that quantifies an article's influence relative to articles in its field. The authors of the RCR delineate an article's field using its co-citation network. For more details, see the original paper in [PLoS Biology][rcr-pub].
 
-I am new to Latex, but it offers some nice typesetting options and automation features for plain text documents.  for CVs. It also
+There are a few packages for creating CVs/resumes in LaTeX, but I opted for a template created Dario Taraborelli, which can be found on his [website][dar-url] and on his [GitHub][dar-git]. Although it should work for any LaTeX compiler, I have been using TeXShop and the [MacTeX distribution][mactex]. You may need to install the [Academicons package][academicons] and the [FontAwesome package][font]. You may also need to install other fonts, including [Libertine][lib-font].
 
-Although it should work for any LaTeX compiler, I have been using TeXShop and the [MacTeX distribution][mactex]. You may need to install the [Memoir package][memoir] and the [Academicons package][academicons] and the Fontawesome package.
+Steps for compiling:
+1) xelatex smith_cv.tex
+2) pthontex smith_cv.tex
+3) xelatex smith_cv.tex
 
-Very helpful sources:
-1) https://github.com/dartar/cvtex and http://nitens.org/taraborelli/cvtex
-2) Thanks to Dario Taraborelli for template and helpful website http://nitens.org/taraborelli/home
-3) https://github.com/gpoore/pythontex
+Please note that this work is licensed under a [CC BY-SA 3.0 License][cc-sa].
 
-Initial bugs:
-1) need to run in xelatex
-2) install font: The font "Linux Libertine O" cannot be found.
-3) https://www.fontspring.com/support/installing/how-do-i-install-fonts-on-my-mac
-4) Install academicons fonts in the user profile
-5) install other fonts https://sourceforge.net/projects/linuxlibertine/files/latest/download
-
-This work is licensed under a [CC BY-SA 3.0 License][cc-sa].
-
+[lib-font]: https://sourceforge.net/projects/linuxlibertine/files/latest/download
+[dar-url]: http://nitens.org/taraborelli/cvtex
+[dar-git]: https://github.com/dartar/cvtex
+[rcr-nih]: https://icite.od.nih.gov
+[pythontex]: https://github.com/gpoore/pythontex
+[rcr-pub]: https://www.ncbi.nlm.nih.gov/pubmed/27599104
 [academicons]: https://github.com/diogo-fernan/academicons
-[lab]: https://sites.temple.edu/neuroeconlab/
+[font]: http://fontawesome.io
 [cc-sa]: http://creativecommons.org/licenses/by-sa/3.0/
 [mactex]: http://tug.org/mactex/
