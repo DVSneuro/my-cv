@@ -37,6 +37,8 @@
 \newcommand{\html}[1]{\href{#1}{\scriptsize\textsc{[html]}}}
 \newcommand{\pdf}[1]{\href{#1}{\scriptsize\textsc{[pdf]}}}
 \newcommand{\doi}[1]{\href{#1}{\scriptsize\textsc{[doi]}}}
+\newcommand{\psyarxiv}[1]{\href{#1}{\textit{PsyArXiv}}}
+\newcommand{\biorxiv}[1]{\href{#1}{\textit{bioRxiv}}}
 
 % ---- MARGIN YEARS
 \usepackage{marginnote}
@@ -76,6 +78,7 @@
 \usepackage{multicol}
 \usepackage{enumitem}
 
+
 %\defaultfontfeatures{Path = /usr/local/texlive/2017/texmf-dist/fonts/opentype/public/fontawesome/ }
 \defaultfontfeatures{Extension = .otf}
 \usepackage{fontawesome}
@@ -85,7 +88,6 @@
 \usepackage[framemethod=TikZ]{mdframed}
 \newcommand{\pytex}{Python\TeX}
 %\renewcommand*{\thefootnote}{\fnsymbol{footnote}}
-
 
 
 
@@ -188,7 +190,7 @@ email: \href{mailto:david.v.smith@temple.edu}{david.v.smith@temple.edu} \> \faUn
 
 % PUBLICATIONS
 \section*{Publications}
-\aiGoogleScholar \hspace{.01cm} \href{https://scholar.google.com/citations?user=czV7OcQAAAAJ&hl=en}{scholar.google.com}: h-index: 17; i10-index: 23; total citations: 1222 \\ 
+\aiGoogleScholar \hspace{.01cm} \href{https://scholar.google.com/citations?user=czV7OcQAAAAJ&hl=en}{scholar.google.com}: h-index: 18; i10-index: 24; total citations: 1259 \\ 
 \lbrack*shared first authorship; †trainee under my supervision; RCR: \textsc{Relative Citation Ratio}\footnote{The \textsc{Relative Citation Ratio} (RCR) is a field- and time-normalized citation metric \href{http://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1002541}{(Hutchins et al., 2016, \textit{PLoS Biology})}. NIH-funded papers are the benchmark for RCR: Any paper with RCR = 1.0 has an RCR higher than 50\% of NIH-funded papers. Recent papers and papers that are not indexed on PubMed will not have an RCR. All RCR values were extracted from the \href{https://icite.od.nih.gov/stats}{\textit{iCite} database} using \href{https://github.com/gpoore/pythontex}{\pytex} on \today.}]
 
 \subsection*{Original Research Articles}
@@ -205,55 +207,53 @@ def get_rcr(pmid):
 
 \begin{hangparas}{.5in}{1}
 
-\years{24}Utevsky AV, \textbf{Smith DV}, Young JS, Huettel SA (2017). Large-Scale Network Coupling with the Fusiform Cortex Future Social Motivation. \textit{eNeuro}, 4(5): eneuro.0084-17.2017. RCR = \py{get_rcr(29034316)} \pdf{http://www.eneuro.org/content/eneuro/4/5/eneuro.0084-17.2017.full.pdf}
+[24] Utevsky AV, \textbf{Smith DV}, Young JS, Huettel SA (2017). Large-Scale Network Coupling with the Fusiform Cortex Future Social Motivation. \textit{eNeuro}, 4(5): eneuro.0084-17.2017. RCR = \py{get_rcr(29034316)} \pdf{http://www.eneuro.org/content/eneuro/4/5/eneuro.0084-17.2017.full.pdf}
 
-\years{23}Li R*, \textbf{Smith DV}*, Clithero JA, Venkatraman V, Carter RM, Huettel SA (2017). Reason’s Enemy is Not Emotion: Engagement of Cognitive Control Networks Explain Biases in Gain/Loss Framing. \textit{Journal of Neuroscience}, 37 (13) 3588-3598. RCR = \py{get_rcr(28264981)} \pdf{http://www.jneurosci.org/content/jneuro/37/13/3588.full.pdf}
+[23] Li R*, \textbf{Smith DV}*, Clithero JA, Venkatraman V, Carter RM, Huettel SA (2017). Reason’s Enemy is Not Emotion: Engagement of Cognitive Control Networks Explain Biases in Gain/Loss Framing. \textit{Journal of Neuroscience}, 37 (13) 3588-3598. RCR = \py{get_rcr(28264981)} \pdf{http://www.jneurosci.org/content/jneuro/37/13/3588.full.pdf}
 
-\years{22}Cho C, \textbf{Smith DV}, Delgado MR (2016). Reward Sensitivity Enhances Ventrolateral Prefrontal Cortex Activation During Free Choice. \textit{Frontiers in Neuroscience}, 10:529. RCR = \py{get_rcr(27917106)} \html{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5114280/}
+[22] Cho C, \textbf{Smith DV}, Delgado MR (2016). Reward Sensitivity Enhances Ventrolateral Prefrontal Cortex Activation During Free Choice. \textit{Frontiers in Neuroscience}, 10:529. RCR = \py{get_rcr(27917106)} \html{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5114280/}
 
-\years{21}\textbf{Smith DV}, Gseir M, Speer ME, Delgado MR (2016). Toward a Cumulative Science of Functional Integration: a Meta-Analysis of Psychophysiological Interactions. \textit{Human Brain Mapping}, 37(8), 2904-17. RCR = \py{get_rcr(27145472)} \pdf{http://nwkpsych.rutgers.edu/neuroscience/publications/2016_SmithDelgado_HBM.pdf}
+[21] \textbf{Smith DV}, Gseir M, Speer ME, Delgado MR (2016). Toward a Cumulative Science of Functional Integration: a Meta-Analysis of Psychophysiological Interactions. \textit{Human Brain Mapping}, 37(8), 2904-17. RCR = \py{get_rcr(27145472)} \pdf{http://nwkpsych.rutgers.edu/neuroscience/publications/2016_SmithDelgado_HBM.pdf}
 
-\years{20}\textbf{Smith DV}, Rigney AE, Delgado MR (2016). Distinct Reward Properties are Encoded via Corticostriatal Interactions. \textit{Scientific Reports}, 6, 20093. RCR = \py{get_rcr(26831208)} \pdf{https://www.nature.com/articles/srep20093.pdf}
+[20] \textbf{Smith DV}, Rigney AE, Delgado MR (2016). Distinct Reward Properties are Encoded via Corticostriatal Interactions. \textit{Scientific Reports}, 6, 20093. RCR = \py{get_rcr(26831208)} \pdf{https://www.nature.com/articles/srep20093.pdf}
 
-\years{19}\textbf{Smith DV}*, Sip KE*, Delgado MR (2015). Functional Connectivity with Distinct Neural Networks Tracks Fluctuations in Gain/Loss Framing Susceptibility. \textit{Human Brain Mapping}, 36(7), 2743-55. RCR = \py{get_rcr(25858445)} \pdf{http://nwkpsych.rutgers.edu/neuroscience/publications/2015_SmithSipDelgado_HBM.pdf}
+[19] \textbf{Smith DV}*, Sip KE*, Delgado MR (2015). Functional Connectivity with Distinct Neural Networks Tracks Fluctuations in Gain/Loss Framing Susceptibility. \textit{Human Brain Mapping}, 36(7), 2743-55. RCR = \py{get_rcr(25858445)} \pdf{http://nwkpsych.rutgers.edu/neuroscience/publications/2015_SmithSipDelgado_HBM.pdf}
 
-\years{18}Young JS*, \textbf{Smith DV}*, Coutlee CG, Huettel SA (2015). Synchrony Between Sensory and Cognitive Networks is Associated with Subclinical Variation in Autistic Traits. \textit{Frontiers in Human Neuroscience}, 9:146. RCR = \py{get_rcr(25852527)} \html{https://www.frontiersin.org/articles/10.3389/fnhum.2015.00146/full}
+[18] Young JS*, \textbf{Smith DV}*, Coutlee CG, Huettel SA (2015). Synchrony Between Sensory and Cognitive Networks is Associated with Subclinical Variation in Autistic Traits. \textit{Frontiers in Human Neuroscience}, 9:146. RCR = \py{get_rcr(25852527)} \html{https://www.frontiersin.org/articles/10.3389/fnhum.2015.00146/full}
 
-\years{17}Sip KE, \textbf{Smith DV}, Porcelli AJ, Kar K, Delgado MR (2015). Social Closeness and Feedback Modulate Susceptibility to the Framing Effect. \textit{Social Neuroscience}, 10(1), 35-45. RCR = \py{get_rcr(25074501)} \pdf{http://nwkpsych.rutgers.edu/neuroscience/publications/2014_SipSmithDelgado_SocNeuro.pdf}
+[17] Sip KE, \textbf{Smith DV}, Porcelli AJ, Kar K, Delgado MR (2015). Social Closeness and Feedback Modulate Susceptibility to the Framing Effect. \textit{Social Neuroscience}, 10(1), 35-45. RCR = \py{get_rcr(25074501)} \pdf{http://nwkpsych.rutgers.edu/neuroscience/publications/2014_SipSmithDelgado_SocNeuro.pdf}
 
-\years{16}Murty VP, Shermohammed M, \textbf{Smith DV}, Carter RM, Huettel SA, Adcock RA (2014). Resting State Networks Distinguish Human Ventral Tegmental Area from Substantia Nigra. \textit{NeuroImage}, 100(1), 580-589. RCR = \py{get_rcr(24979343)} \html{http://www.sciencedirect.com/science/article/pii/S1053811914005242}
+[16] Murty VP, Shermohammed M, \textbf{Smith DV}, Carter RM, Huettel SA, Adcock RA (2014). Resting State Networks Distinguish Human Ventral Tegmental Area from Substantia Nigra. \textit{NeuroImage}, 100(1), 580-589. RCR = \py{get_rcr(24979343)} \html{http://www.sciencedirect.com/science/article/pii/S1053811914005242}
 
-\years{15}\textbf{Smith DV}, Utevsky AV, Bland AR, Clement NJ, Clithero JA, Harsch AE, Carter RM, Huettel SA (2014). Characterizing Individual Differences in Functional Connectivity Using Dual-Regression and Seed-Based Approaches. \textit{NeuroImage}, 95(1), 1-12. RCR = \py{get_rcr(24662574)} \html{http://www.sciencedirect.com/science/article/pii/S105381191400202X}
+[15] \textbf{Smith DV}, Utevsky AV, Bland AR, Clement NJ, Clithero JA, Harsch AE, Carter RM, Huettel SA (2014). Characterizing Individual Differences in Functional Connectivity Using Dual-Regression and Seed-Based Approaches. \textit{NeuroImage}, 95(1), 1-12. RCR = \py{get_rcr(24662574)} \html{http://www.sciencedirect.com/science/article/pii/S105381191400202X}
 
-\years{14}\textbf{Smith DV}, Clithero JA, Boltuck SE, Huettel SA (2014). Functional Connectivity with Ventromedial Prefrontal Cortex Reflects Subjective Value for Social Rewards. \textit{Social Cognitive and Affective Neuroscience}, 9(12), 2017-2025. RCR = \py{get_rcr(24493836)} \html{https://www.ncbi.nlm.nih.gov/pubmed/24493836}
+[14] \textbf{Smith DV}, Clithero JA, Boltuck SE, Huettel SA (2014). Functional Connectivity with Ventromedial Prefrontal Cortex Reflects Subjective Value for Social Rewards. \textit{Social Cognitive and Affective Neuroscience}, 9(12), 2017-2025. RCR = \py{get_rcr(24493836)} \html{https://www.ncbi.nlm.nih.gov/pubmed/24493836}
 
-\pagebreak
+[13] Utevsky AV, \textbf{Smith DV}, Huettel SA (2014). Precuneus is a Functional Core of the Default-Mode Network. \textit{Journal of Neuroscience}, 34(3), 932-940. RCR = \py{get_rcr(24431451)} \pdf{http://www.jneurosci.org/content/jneuro/34/3/932.full.pdf}
 
-\years{13}Utevsky AV, \textbf{Smith DV}, Huettel SA (2014). Precuneus is a Functional Core of the Default-Mode Network. \textit{Journal of Neuroscience}, 34(3), 932-940. RCR = \py{get_rcr(24431451)} \pdf{http://www.jneurosci.org/content/jneuro/34/3/932.full.pdf}
+[12] Strauman TJ, Detloff AM, Sestokas R, \textbf{Smith DV}, Goetz EL, Rivera C, Kwapil L (2013). What Shall I Be, What Must I Be: Neural Correlates of Personal Goal Activation. \textit{Frontiers in Integrative Neuroscience}, 6:123. RCR = \py{get_rcr(23316145)} \html{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3539852/}
 
-\years{12}Strauman TJ, Detloff AM, Sestokas R, \textbf{Smith DV}, Goetz EL, Rivera C, Kwapil L (2013). What Shall I Be, What Must I Be: Neural Correlates of Personal Goal Activation. \textit{Frontiers in Integrative Neuroscience}, 6:123. RCR = \py{get_rcr(23316145)} \html{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3539852/}
+[11] \textbf{Smith DV}, Clithero JA, Rorden C, Karnath H-O (2013). Decoding the Anatomical Network of Spatial Attention. \textit{Proceedings of the National Academy of Sciences of the USA}, 110(4), 1518-1523. RCR = \py{get_rcr(23300283)} \pdf{http://www.pnas.org/content/110/4/1518.full.pdf}
 
-\years{11}\textbf{Smith DV}, Clithero JA, Rorden C, Karnath H-O (2013). Decoding the Anatomical Network of Spatial Attention. \textit{Proceedings of the National Academy of Sciences of the USA}, 110(4), 1518-1523. RCR = \py{get_rcr(23300283)} \pdf{http://www.pnas.org/content/110/4/1518.full.pdf}
+[10] Jelsone-Swain L, \textbf{Smith DV}, Baylis GC (2012). The Effect of Stimulus Duration and Motor Response in Hemispatial Neglect During a Visual Search Task. \textit{PLoS ONE}, 7(5), e37369. RCR = \py{get_rcr(22662149)} \html{http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0037369}
 
-\years{10}Jelsone-Swain L, \textbf{Smith DV}, Baylis GC (2012). The Effect of Stimulus Duration and Motor Response in Hemispatial Neglect During a Visual Search Task. \textit{PLoS ONE}, 7(5), e37369. RCR = \py{get_rcr(22662149)} \html{http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0037369}
+[9] Libedinsky C, \textbf{Smith DV}, Teng CS, Namburi P, Chen V, Huettel SA, Chee MLW (2011). Sleep Deprivation Alters Valuation Signals in the Ventromedial Prefrontal Cortex. \textit{Frontiers in Behavioral Neuroscience}, 5:70. RCR = \py{get_rcr(22028686)} \html{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3199544/}
 
-\years{9}Libedinsky C, \textbf{Smith DV}, Teng CS, Namburi P, Chen V, Huettel SA, Chee MLW (2011). Sleep Deprivation Alters Valuation Signals in the Ventromedial Prefrontal Cortex. \textit{Frontiers in Behavioral Neuroscience}, 5:70. RCR = \py{get_rcr(22028686)} \html{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3199544/}
+[8] Clithero JA, Reeck CC, Carter RM, \textbf{Smith DV}, Huettel SA (2011). Nucleus Accumbens Mediates Relative Motivation for Rewards in the Absence of Choice. \textit{Frontiers in Human Neuroscience}, 5:87. RCR = \py{get_rcr(21941472)} \html{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3171065/}
 
-\years{8}Clithero JA, Reeck CC, Carter RM, \textbf{Smith DV}, Huettel SA (2011). Nucleus Accumbens Mediates Relative Motivation for Rewards in the Absence of Choice. \textit{Frontiers in Human Neuroscience}, 5:87. RCR = \py{get_rcr(21941472)} \html{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3171065/}
+[7] Appelbaum LG, \textbf{Smith DV}, Boehler CN, Wen C, Woldorff MG (2011). Rapid Modulation of Sensory Processing Induced by Stimulus Conflict. \textit{Journal of Cognitive Neuroscience}, 23(9), 2620-2628. RCR = \py{get_rcr(20849233)} \html{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3096678/}
 
-\years{7}Appelbaum LG, \textbf{Smith DV}, Boehler CN, Wen C, Woldorff MG (2011). Rapid Modulation of Sensory Processing Induced by Stimulus Conflict. \textit{Journal of Cognitive Neuroscience}, 23(9), 2620-2628. RCR = \py{get_rcr(20849233)} \html{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3096678/}
+[6] Clithero JA, \textbf{Smith DV}, Carter RM, Huettel SA (2011). Within- and Cross-Participant Classifiers Reveal Different Neural Coding of Information. \textit{NeuroImage}, 56(2), 699-708. RCR = \py{get_rcr(20347995)} \html{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2908207/}
 
-\years{6}Clithero JA, \textbf{Smith DV}, Carter RM, Huettel SA (2011). Within- and Cross-Participant Classifiers Reveal Different Neural Coding of Information. \textit{NeuroImage}, 56(2), 699-708. RCR = \py{get_rcr(20347995)} \html{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2908207/}
+[5] Hayden BY, \textbf{Smith DV}, Platt ML (2010). Cognitive Control Signals in Posterior Cingulate Cortex. \textit{Frontiers in Human Neuroscience}, 4:223. RCR = \py{get_rcr(21160560)} \html{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3001991/}
 
-\years{5}Hayden BY, \textbf{Smith DV}, Platt ML (2010). Cognitive Control Signals in Posterior Cingulate Cortex. \textit{Frontiers in Human Neuroscience}, 4:223. RCR = \py{get_rcr(21160560)} \html{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3001991/}
+[4] \textbf{Smith DV}, Davis B, Niu K, Healy E, Bonilha L, Fridriksson J, Morgan P, Rorden C (2010). Spatial Attention Evokes Similar Activation Patterns for Visual and Auditory Stimuli. \textit{Journal of Cognitive Neuroscience}, 22(2), 347-361. RCR = \py{get_rcr(19400684)} \html{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2846529/}
 
-\years{4}\textbf{Smith DV}, Davis B, Niu K, Healy E, Bonilha L, Fridriksson J, Morgan P, Rorden C (2010). Spatial Attention Evokes Similar Activation Patterns for Visual and Auditory Stimuli. \textit{Journal of Cognitive Neuroscience}, 22(2), 347-361. RCR = \py{get_rcr(19400684)} \html{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2846529/}
+[3] \textbf{Smith DV}, Hayden BY, Truong T-K, Song AW, Platt ML, Huettel SA (2010). Distinct Value Signals in Anterior and Posterior Ventromedial Prefrontal Cortex. \textit{Journal of Neuroscience}, 30(7), 2490-2495. RCR = \py{get_rcr(20164333)} \html{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2856318/}
 
-\years{3}\textbf{Smith DV}, Hayden BY, Truong T-K, Song AW, Platt ML, Huettel SA (2010). Distinct Value Signals in Anterior and Posterior Ventromedial Prefrontal Cortex. \textit{Journal of Neuroscience}, 30(7), 2490-2495. RCR = \py{get_rcr(20164333)} \html{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2856318/}
+[2] Hayden BY, \textbf{Smith DV}, Platt ML (2009). Electrophysiological Correlates of Default-Mode Processing in Macaque Posterior Cingulate Cortex. \textit{Proceedings of the National Academy of Sciences of the USA}, 106(14), 5948-5953. RCR = \py{get_rcr(19293382)} \html{Electrophysiological Correlates of Default-Mode Processing in Macaque Posterior Cingulate Cortex}
 
-\years{2}Hayden BY, \textbf{Smith DV}, Platt ML (2009). Electrophysiological Correlates of Default-Mode Processing in Macaque Posterior Cingulate Cortex. \textit{Proceedings of the National Academy of Sciences of the USA}, 106(14), 5948-5953. RCR = \py{get_rcr(19293382)} \html{Electrophysiological Correlates of Default-Mode Processing in Macaque Posterior Cingulate Cortex}
-
-\years{1}Almor A, \textbf{Smith DV}, Bonilha L, Fridriksson J, Rorden C (2007). What is in a Name? Spatial Brain Circuits are Used to Track Discourse References. \textit{Neuroreport}, 18(12), 1215-1219. RCR = \py{get_rcr(17632270)} \pdf{http://www.mccauslandcenter.sc.edu/aLab/sites/sc.edu.alab/files/attachments/almor-et-al-2007.pdf} \\
+[1] Almor A, \textbf{Smith DV}, Bonilha L, Fridriksson J, Rorden C (2007). What is in a Name? Spatial Brain Circuits are Used to Track Discourse References. \textit{Neuroreport}, 18(12), 1215-1219. RCR = \py{get_rcr(17632270)} \pdf{http://www.mccauslandcenter.sc.edu/aLab/sites/sc.edu.alab/files/attachments/almor-et-al-2007.pdf} \\
 
 \end{hangparas}
 
@@ -262,26 +262,25 @@ def get_rcr(pmid):
 
 \begin{hangparas}{.5in}{1}
 
-\years{10}\textbf{Smith DV} \& Delgado MR (2017). Meta-Analysis of Psychophysiological Interactions: Revisiting Cluster-Level Thresholding and Sample Sizes. \textit{Human Brain Mapping}, 38(1), 588-591. RCR = \py{get_rcr(27543687)} \html{https://www.ncbi.nlm.nih.gov/pubmed/27543687}
+[10] \textbf{Smith DV} \& Delgado MR (2017). Meta-Analysis of Psychophysiological Interactions: Revisiting Cluster-Level Thresholding and Sample Sizes. \textit{Human Brain Mapping}, 38(1), 588-591. RCR = \py{get_rcr(27543687)} \html{https://www.ncbi.nlm.nih.gov/pubmed/27543687}
 
-\years{9}Bhanji JP, \textbf{Smith DV}, Delgado MR (2016). A Brief Anatomical Sketch of Human Ventromedial Prefrontal Cortex. [Supplementary Note 1 for Delgado et al. (2016). \textit{Nature Neuroscience}, 19(12), 1545-1552]. RCR = None \pdf{https://media.nature.com/original/nature-assets/neuro/journal/v19/n12/extref/nn.4438-s1.pdf}
+[9] Bhanji JP, \textbf{Smith DV}, Delgado MR (2016). A Brief Anatomical Sketch of Human Ventromedial Prefrontal Cortex. [Supplementary Note 1 for Delgado et al. (2016). \textit{Nature Neuroscience}, 19(12), 1545-1552]. RCR = None \pdf{https://media.nature.com/original/nature-assets/neuro/journal/v19/n12/extref/nn.4438-s1.pdf}
 
-\years{8}Wang KS, \textbf{Smith DV}, Delgado MR (2016). Using fMRI to Study Reward Processing in Humans: Past, Present, and Future. \textit{Journal of Neurophysiology}, 115, 1664-1678. RCR = \py{get_rcr(26740530)} \pdf{http://www.physiology.org/doi/pdf/10.1152/jn.00333.2015}
+[8] Wang KS, \textbf{Smith DV}, Delgado MR (2016). Using fMRI to Study Reward Processing in Humans: Past, Present, and Future. \textit{Journal of Neurophysiology}, 115, 1664-1678. RCR = \py{get_rcr(26740530)} \pdf{http://www.physiology.org/doi/pdf/10.1152/jn.00333.2015}
 
-\years{7}\textbf{Smith DV} \& Delgado MR (2015). Social Nudges: Utility Conferred from Others. \textit{Nature Neuroscience}, 18(6), 791-792. RCR = \py{get_rcr(26007210)} \pdf{http://nwkpsych.rutgers.edu/neuroscience/publications/2015_SmithDelgado_NatNeuro.pdf}
+[7] \textbf{Smith DV} \& Delgado MR (2015). Social Nudges: Utility Conferred from Others. \textit{Nature Neuroscience}, 18(6), 791-792. RCR = \py{get_rcr(26007210)} \pdf{http://nwkpsych.rutgers.edu/neuroscience/publications/2015_SmithDelgado_NatNeuro.pdf}
 
-\years{6}\textbf{Smith DV} \& Delgado MR (2015). Reward Processing. In A. W. Toga (Ed.), \textit{Brain Mapping: An Encyclopedic Reference} (1st ed., pp. 361-366). Waltham, MA: Academic Press. RCR = None \pdf{http://nwkpsych.rutgers.edu/neuroscience/publications/2015_SmithDelgado_RewardChapter.pdf}
+[6] \textbf{Smith DV} \& Delgado MR (2015). Reward Processing. In A. W. Toga (Ed.), \textit{Brain Mapping: An Encyclopedic Reference} (1st ed., pp. 361-366). Waltham, MA: Academic Press. RCR = None \pdf{http://nwkpsych.rutgers.edu/neuroscience/publications/2015_SmithDelgado_RewardChapter.pdf}
 
-\years{5}Karnath H-O \& \textbf{Smith DV} (2014). The Next Step in Modern Brain Lesion Analysis: Multivariate Pattern Analysis. \textit{Brain}, 137(9), 2405-2407. RCR = \py{get_rcr(25125587)} \pdf{https://sites.google.com/a/temple.edu/dvs-lab/2014_KarnathSmith_Brain.pdf}
+[5] Karnath H-O \& \textbf{Smith DV} (2014). The Next Step in Modern Brain Lesion Analysis: Multivariate Pattern Analysis. \textit{Brain}, 137(9), 2405-2407. RCR = \py{get_rcr(25125587)} \pdf{https://sites.google.com/a/temple.edu/dvs-lab/2014_KarnathSmith_Brain.pdf}
 
-\years{4}Bland AR, Mushtaq F, \textbf{Smith DV} (2011). Exploiting Trial-to-Trial Variability in Multimodal Experiments. \textit{Frontiers in Human Neuroscience}, 5:80. RCR = \py{get_rcr(21886619)} \html{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3155870/}
+[4] Bland AR, Mushtaq F, \textbf{Smith DV} (2011). Exploiting Trial-to-Trial Variability in Multimodal Experiments. \textit{Frontiers in Human Neuroscience}, 5:80. RCR = \py{get_rcr(21886619)} \html{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3155870/}
 
-\years{3}\textbf{Smith DV} \& Huettel SA (2010). Decision Neuroscience: Neuroeconomics. \textit{Wiley Interdisciplinary Reviews: Cognitive Science}, 1(6), 854-871. RCR = \py{get_rcr(22754602)} \html{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3384699/}
+[3] \textbf{Smith DV} \& Huettel SA (2010). Decision Neuroscience: Neuroeconomics. \textit{Wiley Interdisciplinary Reviews: Cognitive Science}, 1(6), 854-871. RCR = \py{get_rcr(22754602)} \html{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3384699/}
 
-\years{2}\textbf{Smith DV} \& Clithero JA (2009). Manipulating Executive Function with Transcranial Direct Current Stimulation. \textit{Frontiers in Integrative Neuroscience}, 3:26. RCR = \py{get_rcr(19847324)} \html{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2764379/}
+[2] \textbf{Smith DV} \& Clithero JA (2009). Manipulating Executive Function with Transcranial Direct Current Stimulation. \textit{Frontiers in Integrative Neuroscience}, 3:26. RCR = \py{get_rcr(19847324)} \html{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2764379/}
 
-\years{1}Clithero JA \& \textbf{Smith DV} (2009). Reference and Preference: How Does the Brain Scale Subjective Value? \textit{Frontiers in Human Neuroscience}, 3:11. RCR = \py{get_rcr(19680434)} \html{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2715285/} \\
-
+[1] Clithero JA \& \textbf{Smith DV} (2009). Reference and Preference: How Does the Brain Scale Subjective Value? \textit{Frontiers in Human Neuroscience}, 3:11. RCR = \py{get_rcr(19680434)} \html{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2715285/} \\
 
 \end{hangparas}
 
@@ -290,7 +289,9 @@ def get_rcr(pmid):
 
 \begin{hangparas}{.5in}{1}
 
-Wang S†*, Taren AA*, \textbf{Smith DV} (under review). Functional Parcellation of the Default Mode Network: A Large-Scale Meta-Analysis. bio\aibioRxiv iv \html{https://www.biorxiv.org/content/early/2017/11/27/225375} 
+Diehl MM, Lempert K, Parr AC, Ballard I, Steele VR, \textbf{Smith DV} (under review). Toward an Integrative Perspective on the Neural Mechanisms Underlying Persistent Maladaptive Behaviors. Preprint available on \psyarxiv{https://psyarxiv.com/yvds9/}.
+
+Wang S†*, Taren AA*, \textbf{Smith DV} (under review). Functional Parcellation of the Default Mode Network: A Large-Scale Meta-Analysis. Preprint available on \biorxiv{https://www.biorxiv.org/content/early/2017/11/27/225375}.
 
 \textbf{Smith DV}, Kragel PA, Clithero JA, Revill KP, Rorden C, Huettel SA, Carter RM (in prep). Medial-Lateral Gradient within the Human Striatum Decodes Social Rewards.
 
@@ -329,8 +330,6 @@ Ng TH†, Alloy LB, \textbf{Smith DV} (in prep). Altered Reward Circuitry in Uni
 \years{2015} Interacting Brain Regions Contribute to a Range of Individual Differences. Kessler Foundation.
 
 \years{2014} Advanced Statistical Procedures in Lesion Analysis: Multivariate Pattern Analysis. Federation of the European Societies of Neuropsychology Summer School in Berlin, Germany.
-
-\pagebreak 
 
 \years{2014} Characterizing Individual Differences in Decision Making. Sackler Institute for Developmental Psychobiology, Weill Medical College of Cornell University.
 
@@ -425,11 +424,12 @@ Doctoral Student Examination Committees (year of defense): Ashley Drew (2017); K
 \item Association for Psychological Science
 \item Cognitive Neuroscience Society
 \item New York Academy of Sciences
-\item Society for Neuroscience
 \item Organization for Human Brain Mapping
-\item Society for Neuroeconomics
 \item Social \& Affective Neuroscience Society
+\item Society for Neuroeconomics
+\item Society for Neuroscience
 \item Society for Social Neuroscience
+\item Society of Biological Psychiatry
 \end{itemize}
 \end{multicols}
 
@@ -521,9 +521,9 @@ Current Temple University trainees under my direct supervision:
 [*shared first authorship; †trainee under my supervision]
 \subsection*{2018}
 \begin{hangparas}{.5in}{1}
-Chiu M†, Ng TH†, Alloy LB, \textbf{Smith DV} (May, 2018). Reward-dependent Connectivity with Orbitofrontal Cortex in Subclinical Depression. Poster submitted for consideration at the 73rd meeting of the Society of Biological Psychiatry. New York, NY, USA.
+Chiu M†, Ng TH†, Alloy LB, \textbf{Smith DV} (May, 2018). Reward-dependent Connectivity with Orbitofrontal Cortex in Subclinical Depression. Poster presented at the 73rd meeting of the Society of Biological Psychiatry. New York, NY, USA.
 
-Zhang H†, Venkatraman V, \textbf{Smith DV} (May, 2018). Perceiving Social Interactions Suppresses Connectivity between the Default Mode Network and Ventral Striatum. Poster submitted for consideration at the 11th meeting of the Social \& Affective Neuroscience Society. New York, NY, USA. \\
+Zhang H†, Venkatraman V, \textbf{Smith DV} (May, 2018). Perceiving Social Interactions Suppresses Connectivity between the Default Mode Network and Ventral Striatum. Poster presented at the 11th meeting of the Social \& Affective Neuroscience Society. New York, NY, USA. \\
 
 \end{hangparas}
 
