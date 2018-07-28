@@ -191,7 +191,7 @@ email: \href{mailto:david.v.smith@temple.edu}{david.v.smith@temple.edu} \> \faUn
 
 % PUBLICATIONS
 \section*{Publications}
-\aiGoogleScholar \hspace{.01cm} \href{https://scholar.google.com/citations?user=czV7OcQAAAAJ&hl=en}{scholar.google.com}: h-index: 18; i10-index: 23; total citations: 1323 \\ 
+\aiGoogleScholar \hspace{.01cm} \href{https://scholar.google.com/citations?user=czV7OcQAAAAJ&hl=en}{scholar.google.com}: h-index: 19; i10-index: 23; total citations: 1324 \\ 
 \lbrack*shared first authorship; †trainee under my supervision; RCR: \textsc{Relative Citation Ratio}\footnote{The \textsc{Relative Citation Ratio} (RCR) is a field- and time-normalized citation metric \href{http://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1002541}{(Hutchins et al., 2016, \textit{PLoS Biology})}. NIH-funded papers are the benchmark for RCR: Any paper with RCR = 1.0 has an RCR higher than 50\% of NIH-funded papers. Recent papers and papers that are not indexed on PubMed will not have an RCR. All RCR values were extracted from the \href{https://icite.od.nih.gov/stats}{\textit{iCite} database} using \href{https://github.com/gpoore/pythontex}{\pytex} on \today.}]
 
 \subsection*{Original Research Articles}
@@ -200,8 +200,11 @@ email: \href{mailto:david.v.smith@temple.edu}{david.v.smith@temple.edu} \> \faUn
 \begin{pycode}
 import requests
 def get_rcr(pmid):
-    response = requests.get("/".join(["https://icite.od.nih.gov/api","pubs",str(pmid)]))
-    pub = response.json()
+  response = requests.get("/".join(["https://icite.od.nih.gov/api","pubs",str(pmid)]))
+  pub = response.json()
+  if pub['relative_citation_ratio'] is not None:
+    return round(pub['relative_citation_ratio'],2)
+  else:
     return pub['relative_citation_ratio']
 \end{pycode}
 
