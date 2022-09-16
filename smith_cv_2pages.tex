@@ -1,0 +1,234 @@
+%------------------------------------
+% Dario Taraborelli
+% Typesetting your academic CV in LaTeX
+%
+% URL: http://nitens.org/taraborelli/cvtex
+% DISCLAIMER: This template is provided for free and without any guarantee 
+% that it will correctly compile on your system if you have a non-standard  
+% configuration.
+% Some rights reserved: http://creativecommons.org/licenses/by-sa/3.0/
+%
+% Adapted from https://github.com/dartar/cvtex
+% by David V. Smith (david.v.smith@temple.edu)
+%------------------------------------
+
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[11pt, letterpaper]{article}
+\usepackage{xunicode,fontspec,xltxtra} 
+\usepackage{libertine} 
+
+% DOCUMENT LAYOUT
+\usepackage{geometry} 
+\geometry{letterpaper, textwidth=5.5in, textheight=8.5in, marginparsep=7pt, marginparwidth=.6in}
+\setlength\parindent{0in}
+
+% FONTS
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{xunicode}
+\usepackage{xltxtra}
+\defaultfontfeatures{Mapping=tex-text}
+
+% ---- CUSTOM COMMANDS
+\chardef\&="E050
+\newcommand{\html}[1]{\href{#1}{\scriptsize\textsc{[html]}}}
+\newcommand{\pdf}[1]{\href{#1}{\scriptsize\textsc{[pdf]}}}
+\newcommand{\doi}[1]{\href{#1}{\scriptsize\textsc{[doi]}}} % need this by every paper so i don't have to worry about the link breaking
+\newcommand{\psyarxiv}[1]{\href{#1}{\textit{PsyArXiv}}}
+\newcommand{\biorxiv}[1]{\href{#1}{\textit{bioRxiv}}}
+\newcommand{\medrxiv}[1]{\href{#1}{\textit{medRxiv}}}
+
+% -- "open science" made explicit 
+\newcommand{\neurovault}[1]{\href{#1}{\scriptsize\textsc{[NeuroVault]}}}
+\newcommand{\materials}[1]{\href{#1}{\scriptsize\textsc{[Open Materials]}}}
+\newcommand{\data}[1]{\href{#1}{\scriptsize\textsc{[Open Data]}}}
+\newcommand{\preregistration}[1]{\href{#1}{\scriptsize\textsc{[PreRegistration]}}}
+
+
+% ---- MARGIN YEARS
+\usepackage{marginnote}
+\newcommand{\amper{}}{\chardef\amper="E0BD }
+\newcommand{\years}[1]{\marginnote{\scriptsize #1}}
+\renewcommand*{\raggedleftmarginnote}{}
+\setlength{\marginparsep}{7pt}
+\reversemarginpar
+
+% HEADINGS
+\usepackage{sectsty} 
+\usepackage[normalem]{ulem} 
+\sectionfont{\mdseries\upshape\LARGE}
+\subsectionfont{\mdseries\scshape\large\bfseries}
+
+\sectionfont{\sectionrule{0pt}{0pt}{-5pt}{0.8pt}}
+
+
+% PDF SETUP
+% ---- FILL IN HERE THE DOC TITLE AND AUTHOR
+\usepackage[driverfallback=dvipdfm, bookmarks, colorlinks, breaklinks, 
+% ---- FILL IN HERE THE TITLE AND AUTHOR
+	pdftitle={David V. Smith - vita},
+	pdfauthor={David V. Smith},
+	pdfproducer={http://nitens.org/taraborelli/cvtex}
+]{hyperref}  
+\hypersetup{linkcolor=blue,citecolor=blue,filecolor=blue,urlcolor=blue} 
+
+
+% IMPORT OTHER PACKAGES, INCLUDING PYTHONTEX
+\usepackage{amsmath,amssymb}
+\usepackage{fullpage}
+\usepackage{graphicx}
+\usepackage[svgnames]{xcolor}
+\usepackage{url}
+\urlstyle{same}
+\usepackage{academicons}
+\usepackage{hanging}
+\usepackage{multicol}
+\usepackage{enumitem}
+\defaultfontfeatures{Extension = .otf}
+\usepackage{fontawesome}
+\usepackage[makestderr]{pythontex}
+\restartpythontexsession{\thesection}
+\usepackage[framemethod=TikZ]{mdframed}
+\newcommand{\pytex}{Python\TeX}
+\usepackage{nameref}
+
+
+
+\usepackage{pgf,interval}
+
+
+
+% START DOCUMENT
+\begin{document}
+\textbf{{\Huge David V. Smith, Ph.D.}}
+\begin{tabbing}
+Assistant Professor \hspace{2.25in} \= \faTwitter \hspace{.2cm} \= \href{https://twitter.com/DVSneuro}{twitter.com/DVSneuro} \\ 
+Department of Psychology \& Neuroscience  \> \faGithub \>  \href{https://github.com/DVS-Lab/}{github.com/DVS-Lab} \\
+Temple University \>  \aiPublons \> \href{https://publons.com/author/1204254/david-v-smith}{publons.com} \\
+Philadelphia, PA, 19122 \> \aiOSF \> \href{https://osf.io/5zq6h/}{osf.io} \\
+email: \href{mailto:david.v.smith@temple.edu}{david.v.smith@temple.edu} \> \faUniversity \> \href{https://sites.temple.edu/neuroeconlab/}{sites.temple.edu/neuroeconlab}
+ \end{tabbing}
+
+
+%%\hrule \section*{Professional Experience}
+\section*{Professional Experience}
+\begin{tabbing}
+\years{2017-present} \textsc{Temple University} \hspace{.75in} \= \textbf{Assistant Professor}, Department of Psychology \& Neuroscience \\
+\years{2012-2016} \textsc{Rutgers University} \> \textbf{Postdoctoral Fellow}, Department of Psychology \\
+\years{2006-2012} \textsc{Duke University} \> \textbf{Graduate Student}, Center for Cognitive Neuroscience
+\end{tabbing}
+
+%\hrule \section*{Honors \& Awards}
+\section*{Selected Honors and Awards}
+\noindent
+\years{2022}Training Fellowship, ReproNim / International Neuroinformatics Coordinating Facility (INCF)\\
+\years{2021}College of Liberal Arts Research Award, Temple University\\
+\years{2019}Excellence in Mentoring, Temple University, Department of Psychology Honors Program\\
+\years{2019}Faculty Fellow, Public Policy Lab, Temple University\\
+\years{2016}Rising Star, Association for Psychological Science\\
+\years{2015}Ruth L. Kirschstein Postdoctoral National Research Service Award, NIMH\\
+\years{2015}Merit Abstract Award, Organization for Human Brain Mapping\\
+\years{2009}Ruth L. Kirschstein Predoctoral National Research Service Award, NIMH\\
+\years{2005}\textit{Phi Beta Kappa}, University of South Carolina
+
+
+%\hrule \section*{Extramural Funding}
+\section*{Ongoing Extramural Funding}
+
+\begin{hangparas}{.5in}{1}
+
+\years{2021-2026} Social Reward Processing Across the Lifespan: Identifying Risk Factors for Financial Exploitation. (NIH RF1-AG067011; \$3,419,480). Principal Investigator, with Co-Is Giovannetti, Jarcho, and Olson.
+
+\years{2020-2023} The role of social support and close relationships on neural and behavioral computations of value. (NIH R15-MH122927; \$389,000). Consultant, with PI Fareri (Adelphi University).
+
+\years{2022-2027} The influence of mesolimbic-hippocampal interactions on episodic memory during active information seeking. (NIH R01-DA055259; \$2,821,807). Co-Investigator, with PI  Murty (Temple University). \\
+
+\end{hangparas}
+
+
+% PUBLICATIONS
+\section*{Selected Bibliography}
+\aiGoogleScholar \hspace{.01cm} \href{https://scholar.google.com/citations?user=czV7OcQAAAAJ&hl=en}{scholar.google.com}: h-index: 26; i10-index: 38; total citations: 3445 \\ 
+\lbrack*co-first authors; †trainee under my supervision; \^{}co-senior authors]
+
+
+% Function for extracting RCR
+\begin{pycode}
+import requests
+def get_rcr(pmid):
+  response = requests.get("/".join(["https://icite.od.nih.gov/api","pubs",str(pmid)]))
+  pub = response.json()
+  if pub['relative_citation_ratio'] is not None:
+    return round(pub['relative_citation_ratio'],2)
+  else:
+    return pub['relative_citation_ratio']
+\end{pycode}
+
+
+
+
+\subsection*{In Preparation}
+
+\begin{hangparas}{.5in}{1}
+
+Yang Y†*, Hackett K*, Katta S†, Ludwig RM†, Jarcho J, Giovannetti T, Fareri DS\^{}, \textbf{Smith DV}\^{} (in prep). Risk for Financial Exploitation: Establishing the Role of Psychosocial and Sociodemographic Variables. \materials{https://osf.io/hd5nx/} \data{https://osf.io/wxy2v/} \preregistration{https://osf.io/hd5nx/}
+
+\textbf{Smith DV}, Dennison JB, Zaff O, Dowdle L, Jarcho J, Olson I, Rorden C, Fareri D (in prep). Characterizing the effects of multiecho and multiband imaging on corticostriatal connectivity and activation. \materials{https://github.com/DVS-Lab/rf1-sequence-pilot} \preregistration{https://aspredicted.org/9S1_2Q5}
+
+\textbf{Smith DV}, Liu Y, Krekelberg B (in prep). ɑ-tACS selectively modulates reward-dependent corticostriatal connectivity. \materials{https://github.com/DVS-Lab/r21-cardgame}  \\
+
+\end{hangparas}
+
+
+\subsection*{Peer-Reviewed Publications (selected from 52 total)}
+
+\begin{hangparas}{.5in}{1}
+
+Dobryakova E \& \textbf{Smith DV} (2022). Reward Enhances Connectivity between the Ventral Striatum and the Default Mode Network. \textit{NeuroImage}, 285:119398. \doi{https://doi.org/10.1016/j.neuroimage.2022.119398} \neurovault{https://identifiers.org/neurovault.collection:10921} \materials{https://github.com/edobryakova/DobryakovaSmith_HCP}
+
+Fareri DS, Hackett K, Tepfer LJ†, Kelly V†, Henninger N, Reeck C, Giovannetti T, \textbf{Smith DV}  (2022). Age-Related Differences in Ventral Striatal and Default Mode Network Function During Reciprocated Trust. \textit{NeuroImage}, 256:119267. \doi{https://doi.org/10.1016/j.neuroimage.2022.119267} \neurovault{https://identifiers.org/neurovault.collection:10447} \materials{https://github.com/DVS-Lab/srndna-trustgame} \data{https://openneuro.org/datasets/ds003745} \preregistration{https://aspredicted.org/MVZ_ODI}
+
+O'Shea IM, Popal H, Olson IR, Murty VP\^{}, \textbf{Smith DV}\^{} (2022). Distinct Alterations in Cerebellar Connectivity with Substantia Nigra and Ventral Tegmental Area in Parkinson's Disease. \textit{Scientific Reports}, 12, 3289. \doi{https://doi.org/10.1038/s41598-022-07020-x} \preregistration{https://aspredicted.org/WAQ_SVQ}
+
+Tepfer LJ†, Alloy LB, \textbf{Smith DV} (2021). Family History of Depression is Associated with Alterations in Task-Dependent Connectivity between the Cerebellum and Ventromedial Prefrontal Cortex. \textit{Depression and Anxiety},  38(5), 508-520. \doi{https://doi.org/10.1002/da.23143} \neurovault{https://neurovault.org/collections/6130/} \materials{https://osf.io/ju32v/} \preregistration{http://aspredicted.org/blind.php?x=8qw2h3}
+
+Wang S†*, Tepfer LJ†*, Taren AA*, \textbf{Smith DV} (2020). Functional Parcellation of the Default Mode Network: A Large-Scale Meta-Analysis. \textit{Scientific Reports}, 10:16096. \doi{https://doi.org/10.1038/s41598-020-72317-8} \neurovault{https://identifiers.org/neurovault.collection:6262} \materials{https://zenodo.org/record/3599989\#.Xl2u4y2ZPOQ} 
+
+Botvinik-Nezer R, Holzmeister F, ..., Dennison JB†, ...,  \textbf{Smith DV}, ..., Poldrack RA, Schonberg T (2020). Variability in the analysis of a single neuroimaging dataset by many teams. \textit{Nature}, 582, 84-88. \doi{https://doi.org/10.1038/s41586-020-2314-9} \neurovault{https://neurovault.org/collections/6047/} \materials{https://github.com/poldrack/narps} \data{https://openneuro.org/datasets/ds001734/versions/1.0.4} 
+
+Ng TH†, Alloy LB, \textbf{Smith DV} (2019). Meta-analysis of Reward Processing in Major Depressive Disorder Reveals Distinct Abnormalities within the Reward Circuit. \textit{Translational Psychiatry}, 9(293). \doi{https://doi.org/10.1038/s41398-019-0644-x} \neurovault{https://neurovault.org/collections/3884/} \materials{https://osf.io/sjb4d}
+
+Li R*, \textbf{Smith DV}*, Clithero JA, Venkatraman V, Carter RM, Huettel SA (2017). Reason’s Enemy is Not Emotion: Engagement of Cognitive Control Networks Explain Biases in Gain/Loss Framing. \textit{Journal of Neuroscience}, 37 (13) 3588-3598. \doi{https://doi.org/10.1523/JNEUROSCI.3486-16.2017} \neurovault{http://neurovault.org/collections/1484/}
+
+\textbf{Smith DV}, Gseir M, Speer ME, Delgado MR (2016). Toward a Cumulative Science of Functional Integration: a Meta-Analysis of Psychophysiological Interactions. \textit{Human Brain Mapping}, 37(8), 2904-17. \doi{https://doi.org/10.1002/hbm.23216} \neurovault{https://neurovault.org/collections/1406/}
+
+\textbf{Smith DV}, Rigney AE, Delgado MR (2016). Distinct Reward Properties are Encoded via Corticostriatal Interactions. \textit{Scientific Reports}, 6, 20093. \doi{https://doi.org/10.1038/srep20093} \neurovault{http://neurovault.org/collections/1408}
+
+\textbf{Smith DV}, Clithero JA, Boltuck SE, Huettel SA (2014). Functional Connectivity with Ventromedial Prefrontal Cortex Reflects Subjective Value for Social Rewards. \textit{Social Cognitive and Affective Neuroscience}, 9(12), 2017-2025. \doi{https://doi.org/10.1093/scan/nsu005}
+
+\textbf{Smith DV}, Clithero JA, Rorden C, Karnath H-O (2013). Decoding the Anatomical Network of Spatial Attention. \textit{Proceedings of the National Academy of Sciences of the USA}, 110(4), 1518-1523. \doi{https://doi.org/10.1073/pnas.1210126110}
+
+ \textbf{Smith DV}, Hayden BY, Truong T-K, Song AW, Platt ML, Huettel SA (2010). Distinct Value Signals in Anterior and Posterior Ventromedial Prefrontal Cortex. \textit{Journal of Neuroscience}, 30(7), 2490-2495. \doi{https://doi.org/10.1523/JNEUROSCI.3319-09.2010}
+
+
+\end{hangparas}
+
+
+
+
+
+
+%\vspace{1cm}
+\vfill{}
+%\hrulefill
+
+\begin{center}
+{\scriptsize  Last updated: \today\- •\-
+% ---- PLEASE LEAVE THIS BACKLINK FOR ATTRIBUTION AS PER CC-LICENSE
+Typeset in \href{http://nitens.org/taraborelli/cvtex}{\XeTeX} •\- Source code on \href{https://github.com/DVSneuro/my-cv}{GitHub}\\
+% ---- FILL IN THE FULL URL TO YOUR CV HERE
+Link to full CV: \href{https://sites.google.com/a/temple.edu/dvs-lab/SmithDV\_vita.pdf}{https://sites.google.com/a/temple.edu/dvs-lab/SmithDV\_vita.pdf}}
+\end{center}
+
+\end{document}
