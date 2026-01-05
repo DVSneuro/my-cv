@@ -136,3 +136,8 @@ dmypy.json
 bids
 derivatives
 .DS_Store
+
+# extra latex files
+*.aux
+*.out
+*.gz
