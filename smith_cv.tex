@@ -85,17 +85,28 @@
 \usepackage{hanging}
 \usepackage{multicol}
 \usepackage{enumitem}
-\defaultfontfeatures{Extension = .otf}
-% \usepackage{fontawesome}
-\usepackage[makestderr]{pythontex}
-\restartpythontexsession{\thesection}
-\usepackage[framemethod=TikZ]{mdframed}
-\newcommand{\pytex}{Python\TeX}
 \usepackage{nameref}
 
 \usepackage{fontawesome6}  % FA6 Free
 % If you own FA6 Pro desktop fonts and use XeLaTeX/LuaLaTeX:
 % \usepackage[pro]{fontawesome6}
+
+
+% --- Fix Academicons glyphs missing under XeLaTeX (forces the TTF)
+% Locate the installed font with: kpsewhich academicons.ttf
+\newfontfamily{\AIcons}{academicons.ttf}[
+  Path=/usr/local/texlive/2025/texmf-dist/fonts/truetype/public/academicons/,
+]
+
+% Patch the 5 icons you use in the header
+\renewcommand{\aiGoogleScholar}{{\AIcons\symbol{"E9D4}}}
+\renewcommand{\aiResearchGate}{{\AIcons\symbol{"E95E}}}
+\renewcommand{\aiOrcid}{{\AIcons\symbol{"E9D9}}}
+\renewcommand{\aiPublons}{{\AIcons\symbol{"E937}}}
+\renewcommand{\aiOSF}{{\AIcons\symbol{"E9EF}}}
+
+% --- Fix fancyhdr warning (headheight = 0.0pt)
+\setlength{\headheight}{14pt}
 
 
 
@@ -211,11 +222,11 @@ email: \href{mailto:david.v.smith@temple.edu}{david.v.smith@temple.edu} \> {\faI
 \subsection*{Pending}
 \begin{hangparas}{.5in}{1}
 
-\years{2026-2028} Environmental and Neural Drivers of Internalizing and Externalizing Behaviors. (NIH R21-MH000000 *\$432,217). Principal Investigator, with MPI Mennis and Co-I Olino. [Submitted June 2025]
+\years{2026-2028} Environmental and Neural Drivers of Internalizing and Externalizing Behaviors. (NIH R21-MH144522 *\$432,217). Principal Investigator, with MPI Mennis and Co-I Olino. [Submitted June 2025]
 
 \years{2026-2028} Modifiable and Nonmodifiable Risk Factors for Financial Exploitation and Subjective Cognitive Decline. (NIH R03-AG098465 *\$158,500). Principal Investigator, with Co-Is Mennis and Helion. [Submitted February 2025]
 
-\years{2025-2029} Environmental and Neural Drivers of Adolescent Cannabis Use. (NIH R01-DA062153 *\$2,453,968). Principal Investigator, with MPI Mennis and Co-Is Olino and Weinstein. [Submitted November 2024]
+\years{2026-2030} Environmental and Neural Drivers of Adolescent Cannabis Use. (NIH R01-DA066736 *\$2,661,323). Principal Investigator, with MPI Mennis and Co-I Olino. [Submitted December 2025] 
 
 \years{2025-2030} Modulating Reward Processing with Transcranial Electrical Stimulation. (NIH R01-DA063106; *\$3,902,693). Principal Investigator, with MPI Krekelberg and Co-Is Alloy and Weinstein. [Submitted August 2024] \\
 
@@ -260,8 +271,6 @@ email: \href{mailto:david.v.smith@temple.edu}{david.v.smith@temple.edu} \> {\faI
 
 \years{2023-2028} An inverse developmental gradient of cerebellar modulation of social behavior. (NIH R01 *\$2,555,330) Co-Investigator, with PI Ingrid Olson (Temple University).
 
-\years{2022-2027} Anhedonia-related deficits in context-sustained goal pursuit across normative and clinical-risk populations. (NIH R01 *\$2,922,995) Co-Investigator, with PI Vishnu Murty (University of Oregon). \\
-
 
 \end{hangparas}
 
@@ -279,7 +288,7 @@ email: \href{mailto:david.v.smith@temple.edu}{david.v.smith@temple.edu} \> {\faI
 
 % PUBLICATIONS
 \section*{Bibliography}
-\aiGoogleScholar \hspace{.01cm} \href{https://scholar.google.com/citations?user=czV7OcQAAAAJ&hl=en}{scholar.google.com}: h-index: 30; i10-index: 52; total citations: 5554 \\ 
+\aiGoogleScholar \hspace{.01cm} \href{https://scholar.google.com/citations?user=czV7OcQAAAAJ&hl=en}{scholar.google.com}: h-index: 31; i10-index: 54; total citations: 5889 \\ 
 \lbrack*co-first authors; †trainee under my supervision; \^{}co-senior authors] \\ 
 
 \textit{Where possible, I include links to \href{https://neurovault.org}{NeuroVault} maps, open materials, open data, and preregistrations.}
@@ -289,9 +298,22 @@ email: \href{mailto:david.v.smith@temple.edu}{david.v.smith@temple.edu} \> {\faI
 
 \begin{hangparas}{.5in}{1}
 
-Wyngaarden JB, Nambiar A, Dennison J, Alloy LB, Fareri DS, Jarcho JM, \textbf{Smith DV}. Trait reward sensitivity and behavioral motivation shape connectivity between the default mode network and the striatum during reward anticipation. \biorxiv{https://doi.org/10.1101/2025.04.17.649386}
 
-Yang Y† \& \textbf{Smith DV}. Structure-Trait-Identity Relation (STIR): An Integrative Framework for Understanding Redistribution Decisions in Economic Games. Preprint available on \psyarxiv{https://osf.io/preprints/psyarxiv/43nvt}
+Mattoni M†, Wang S†, Sharp CJ†, Olino TM, \textbf{Smith DV}. Precision Imaging for Intraindividual Investigation of the Reward Response. Preprint available on \biorxiv{https://doi.org/10.1101/2025.09.26.678878}.
+
+Yang Y†, Ludwig RM†, Wyngaarden JB†, Dwamena D†, Hackett K, Giovannetti T, Fareri DS, \textbf{Smith DV}. Older Adults Show Altered Network Connectivity during Fairness Decisions with Similar and Dissimilar Partners. Preprint available on \biorxiv{https://doi.org/10.1101/2025.08.13.670194}.
+
+\textbf{Smith DV}, Fareri DS, Dobryakova E. Contributions of default mode network to subjective valuation and maladaptive decision making. Preprint available on \psyarxiv{https://doi.org/10.31234/osf.io/zrd5b_v1}.
+
+Popal H, Quarmley M, \textbf{Smith DV}, Jarcho J, Olson IR. The Cerebellum and Striatum in Reward Processing: Caring About Being Right vs. Caring About Reward. Preprint available on \biorxiv{https://doi.org/10.1101/2025.06.04.657253}.
+
+Dwamena D†*, Stanley JM†*, Wyngaarden JB†, Kos M†, Sharp C†, Jarcho JM, Fareri DS, \textbf{Smith DV}. Neural and Behavioral Responses to Social Norm Violations Across Trust and Fairness Contexts. Preprint available on \biorxiv{https://doi.org/10.1101/2025.11.20.689349}.
+
+Sazhin D†, Helion C, Murty V, \textbf{Smith DV}. Sunk Cost Fallacy Is Associated With Biased Predictions. Preprint available on \psyarxiv{https://doi.org/10.31219/osf.io/2kxmq_v1}.
+
+Shah S†*, Dennison JB†*, Wyngaarden JB†, Clithero JA, \textbf{Smith DV}. Ambiguity Preferences Are Distinct from Beliefs About Risk. Preprint available on \psyarxiv{https://doi.org/10.31234/osf.io/wrej8_v2}.
+
+Yang Y† \& \textbf{Smith DV}. Structure-Trait-Identity Relation (STIR): An Integrative Framework for Understanding Redistribution Decisions in Economic Games. Preprint available on \psyarxiv{https://osf.io/preprints/psyarxiv/43nvt}.
 
 Shen X†, Wang KS, Murty VP, Delgado MR, \textbf{Smith DV}. Differential representations for affective and informative components of reward in the striatum and hippocampus. Preprint available on \biorxiv{https://doi.org/10.1101/2024.09.20.614186}. \materials{https://github.com/KarenShen21/ru-highres}. \preregistration{https://aspredicted.org/DKZ_W5Y}
 
@@ -304,11 +326,17 @@ Shen X†, Wang KS, Murty VP, Delgado MR, \textbf{Smith DV}. Differential repres
 
 \begin{hangparas}{.5in}{1}
 
+[72] Wyngaarden JB†*, Nambiar A†*, Dennison J†, Alloy LB, Fareri DS, Jarcho JM, \textbf{Smith DV} (2026, in press). Trait reward sensitivity and behavioral motivation shape connectivity between the default mode network and the striatum during reward anticipation. \textit{Cognitive, Affective, and Behavioral Neuroscience}. Preprint available on \biorxiv{https://doi.org/10.1101/2025.04.17.649386}.
+
+[71] Kilcullen MR, Luistro JN, Kos M, Mennis J, Smith DV, Olson IR (2025). Air pollution and impulsive choice in aging: evidence from delay discounting. \textit{GeroScience}. \doi{https://doi.org/10.1007/s11357-025-01906-0}
+
+[70] Wyngaarden JB†*, Yang Y†*, Dennison JB†*, \textbf{Smith DV}. A dataset of risky and ambiguous decisions using a novel Linked Colored Lottery Task across two studies. \textit{Data Brief}, 61, 111844. \doi{https://doi.org/10.1016/j.dib.2025.111844} \materials{https://github.com/DVS-Lab/risk-ambiguity-DataInBrief} \data{https://doi.org/10.5281/zenodo.15122334}
+
 [69] Tropea T†, Yang Y†, Ludwig R, Fareri DS, Mennis J, \& \textbf{Smith DV} (2025). Reduced community-level social cohesion is associated with higher risk for financial exploitation. \textit{Aging and Mental Health}, 1-14. \doi{https://doi.org/10.1080/13607863.2025.2533493} \preregistration{https://doi.org/10.17605/OSF.IO/86XHK}
 
 [68] Mattoni M, \textbf{Smith DV}, Chein J, \& Olino TM. (2025). Functional connectivity heterogeneity and consequences for clinical and cognitive prediction: Stage 2 registered report. \textit{Imaging Neuroscience}, 3, IMAG.a.107. \doi{https://doi.org/10.1162/IMAG.a.107}
 
-[67] Yang Y†, Hackett K, Katta S†, Ludwig R†, Jarcho J, Giovannetti T, Fareri DS\^{}, \textbf{Smith DV}\^{} (2025, in press). Psychological, social, and health-related factors predict risk for financial exploitation. \textit{Communications Psychology}, 3, 88. \doi{https://doi.org/10.1038/s44271-025-00266-x} \materials{https://osf.io/hd5nx/} \data{https://osf.io/hd5snx/} \preregistration{https://osf.io/hd5nx/}
+[67] Yang Y†, Hackett K, Katta S†, Ludwig R†, Jarcho J, Giovannetti T, Fareri DS\^{}, \textbf{Smith DV}\^{} (2025). Psychological, social, and health-related factors predict risk for financial exploitation. \textit{Communications Psychology}, 3, 88. \doi{https://doi.org/10.1038/s44271-025-00266-x} \materials{https://osf.io/hd5nx/} \data{https://osf.io/hd5snx/} \preregistration{https://osf.io/hd5nx/}
 
 [66] Sazhin D†, Dachs A†, \textbf{Smith DV} (2025). Meta-Analysis Reveals That Explore–Exploit Decisions Are Dissociable by Activation in the Dorsal Lateral Prefrontal Cortex, Anterior Insula, and Dorsal Anterior Cingulate Cortex. \textit{European Journal of Neuroscience}, 61(6), e70081. \doi{https://doi.org/10.1111/ejn.70081} \neurovault{https://neurovault.org/collections/15560/} \data{https://osf.io/86kp9/} \preregistration{https://aspredicted.org/7hc7c.pdf}
 
@@ -454,9 +482,9 @@ Shen X†, Wang KS, Murty VP, Delgado MR, \textbf{Smith DV}. Differential repres
 
 [6] \textbf{Smith DV} and Huettel SA (2026, forthcoming). Functional MRI (fMRI). In G. Tranter and D. Le Pevelen (Eds.) \textit{Encyclopedia of Spectroscopy and Spectrometry}, 4th edition.
 
-[5]  \textbf{Smith DV}, Lockwood P, Fareri DS (Eds.). (2025). \textit{Neuroeconomics: Core Topics and Current Directions}. Springer Nature.
+[5]  \textbf{Smith DV}, Lockwood P, Fareri DS (Eds.). (2026, forthcoming). \textit{Neuroeconomics: Core Topics and Current Directions}. Springer Nature.
 
-[4] Wyngaarden J, Giovannetti T, Krekelberg B, \textbf{Smith DV} (2025). Maladaptive decision making in older adults: Confirmation bias and financial exploitation. In D. V. Smith, P. Lockwood, D. S. Fareri (Eds.), \textit{Neuroeconomics: Core Topics and Current Directions}. Springer Nature. Preprint available on \psyarxiv{https://osf.io/preprints/psyarxiv/abnyd}
+[4] Wyngaarden J, Giovannetti T, Krekelberg B, \textbf{Smith DV} (2026). Maladaptive decision making in older adults: Confirmation bias and financial exploitation. In D. V. Smith, P. Lockwood, D. S. Fareri (Eds.), \textit{Neuroeconomics: Core Topics and Current Directions}. Springer Nature. Preprint available on \psyarxiv{https://osf.io/preprints/psyarxiv/abnyd}
 
 [3] Ludwig RM† \& \textbf{Smith DV} (2023). Financial Fraud among Older Americans: Evidence and Implications. \textit{Temple University Public Policy Lab, Policy Brief}, 20, 1-5. \doi{https://doi.org/10.31234/osf.io/9f8ha}
 
@@ -482,8 +510,6 @@ Shen X†, Wang KS, Murty VP, Delgado MR, \textbf{Smith DV}. Differential repres
 \years{2022} Age-related Differences in Social and Economic Decision Making. Society for Social Neuroscience in San Diego, CA.
 
 \years{2020} Symposium on ``The Neuroscience of Decision Making in Organizations'' (panelist), Academy of Management in Vancouver, Canada. [canceled due to COVID-19]
-
-\pagebreak
 
 \years{2020} Social Decision Making in Older Adults: Risk Factors for Financial Exploitation? Scientific Research Network on Decision Neuroscience and Aging in Kapolei, Hawaii.
 
@@ -528,11 +554,10 @@ Shen X†, Wang KS, Murty VP, Delgado MR, \textbf{Smith DV}. Differential repres
 \years{2015-2017}Review Editor, \textit{Frontiers in Neuroscience}, section Decision Neuroscience. \\
 
 
-Ad Hoc Reviewer for 97 journals:
+Ad Hoc Reviewer for 103 journals:
 \begin{multicols}{2}
 \begin{itemize}[noitemsep]
 \itshape
-
 
 \item Accountability in Research: Ethics, Integrity and Policy
 \item Acta Psychologia
@@ -552,6 +577,7 @@ Ad Hoc Reviewer for 97 journals:
 \item Brain Imaging and Behavior
 \item Brain Structure and Function
 \item Brain Sciences
+\item Brain Topography
 \item British Journal of Pharmacology
 \item British Journal of Psychology
 \item BMC Neuroscience 
@@ -579,6 +605,7 @@ Ad Hoc Reviewer for 97 journals:
 \item Frontiers in Neurology 
 \item Frontiers in Neuroscience 
 \item Frontiers in Psychology 
+\item Heliyon
 \item Human Brain Mapping 
 \item IEEE Transactions on Biomedical Engineering
 \item IEEE Transactions on Neural Systems \& Rehabilitation Engineering
@@ -587,6 +614,7 @@ Ad Hoc Reviewer for 97 journals:
 \item International Journal of Environmental Research and Public Health
 \item International Journal of Hyperthermia 
 \item International Journal of Innovation Studies
+\item Journal of Affective Disorders Reports
 \item Journal of Cognitive Neuroscience 
 \item Journal of Experimental Psychology: General
 \item Journal of Genetic Psychology
@@ -601,6 +629,7 @@ Ad Hoc Reviewer for 97 journals:
 \item Journal of Psychiatric Research
 \item Journal of Social and Personal Relationships
 \item Management Information Systems Quarterly 
+\item Memory and Cognition
 \item Nature Communications 
 \item Nature Human Behaviour 
 \item Nature Neuroscience
@@ -626,12 +655,14 @@ Ad Hoc Reviewer for 97 journals:
 \item Psychopathology 
 \item Psychophysiology
 \item Quantitative Imaging in Medicine and Surgery
+\item Royal Society Open Science
 \item Scientific Reports 
 \item Sleep
 \item Social, Cognitive, and Affective Neuroscience 
 \item Social Neuroscience
 \item Translational Psychiatry
 \item WIRES: Cognitive Science
+
 \end{itemize}
 \end{multicols}
 
@@ -640,6 +671,9 @@ Awards on \textit{Publons}: Top Reviewers for Neuroscience \& Behavior (2018); T
 
 
 \subsection*{Ad Hoc Grant Reviewing}
+\years{2026} Natural Sciences and Engineering Research Council of Canada. \\
+\years{2025} National Institutes of Health, Fellowships (ZRG1 F16-S (20) L). \\
+\years{2025} National Institute on Drug Abuse, Special Emphasis Panel (ZDA1 SAI-N (M2) R). [canceled] \\
 \years{2024} National Institutes of Health, ALP Study Section. \\
 \years{2024} Deutsche Forschungsgemeinschaft (DFG) (German Research Foundation). \\
 \years{2024} UK Research and Innovation, MRC Neurosciences and Mental Health. \\
@@ -661,7 +695,7 @@ Awards on \textit{Publons}: Top Reviewers for Neuroscience \& Behavior (2018); T
 \years{2025-present} Teaching Awards Committee, College of Liberal Arts. \\ 
 \years{2025-present} Budget Review Committee, Faculty Senate. \\
 \years{2024-present} Tenure Track Merit Committee (elected), College of Liberal Arts. \\ 
-\years{2024-present} Research Programs and Policies Committee (elected), Faculty Senate. \\
+\years{2024-present} Research Programs and Policies Committee (elected; Vice Chair for 2025-26), Faculty Senate. \\
 \years{2017} Subcommittee to evaluate and design deep learning server.
 
 \subsection*{Departmental Service at Temple University}
@@ -677,7 +711,9 @@ Awards on \textit{Publons}: Top Reviewers for Neuroscience \& Behavior (2018); T
 
 
 
-\subsection*{Society Memberships}
+\subsection*{Involvement in Professional Societies}
+
+Past and Current Memberships:
 \begin{multicols}{2}
 \begin{itemize}[noitemsep]
 \item Association for Psychological Science
@@ -691,24 +727,20 @@ Awards on \textit{Publons}: Top Reviewers for Neuroscience \& Behavior (2018); T
 \item Society for Social Neuroscience
 \item Society of Biological Psychiatry
 \item Society for Judgment and Decision Making
-
 \end{itemize}
 \end{multicols}
 
-\subsection*{Other Activities}
-\begin{hangparas}{.5in}{1}
-Co-Organizer, Duke University Neuroeconomics Journal Club (2008-2009).
+Abstract Reviewing: \\ [.1cm]
+Society for Neuroeconomics (2025). \\ 
+Organization for Human Brain Mapping (2010, 2013-2019, 2021, 2023-2026). \\
+Cognitive Science Society (2017). \\
 
-Conference Abstract Reviewer: Organization for Human Brain Mapping (2010, 2013-2019, 2021, 2023, 2024); Cognitive Science Society (2017) Society for Neuroeconomics (2025). \\
-
-\end{hangparas}
-
-
+Leadership and Committee Work: \\ [.1cm]
 \years{2025-present} Best Practices Committee, Organization for Human Brain Mapping \\
 \years{2025-present} Partnerships Committee, Social Affective Neuroscience Society \\
 
 
-
+\pagebreak
 % ----------------------TEACHING------------------------------------------
 \section*{Teaching and Mentoring Activities}
 \subsection*{Teaching Experience}
@@ -717,7 +749,9 @@ Conference Abstract Reviewer: Organization for Human Brain Mapping (2010, 2013-2
 
 [\underline{U}ndergraduate, \underline{G}raduate; \underline{S}pring, \underline{F}all; *original course]  \\
 
-Instructor, \textit{Advanced Statistics} [G], Temple University: 2023S, 2024S, 2025S
+Instructor, \textit{Topical Seminar in Cognitive Psychology} [G], Temple University: 2026S\footnote{Topic: ``Neuroimaging Methods \& Analysis"}
+
+Instructor, \textit{Advanced Statistics} [G], Temple University: 2023S, 2024S, 2025S, 2026S
 
 Instructor, \textit{Topical Seminar in Neuroscience} [G], Temple University: 2022S\footnote{Topic: ``Neuroimaging Methods \& Analysis"}
 
@@ -737,10 +771,13 @@ Lab Instructor, \textit{Neuroscience Boot Camp} [G], Duke University: 2011F
 
 Teaching Assistant, \textit{Introduction to Cognitive Neuroscience} [U], Duke University: 2010S
 
-Teaching Assistant, \textit
+Teaching Assistant, \textit{Brain Waves and Cognition} [U], Duke University: 2009S
+
+Teaching Assistant, \textit{Functional Magnetic Resonance Imaging} [G], Duke University: 2008F
+
 Supplemental Instruction Leader, \textit{Psychological Statistics} [U], University of South Carolina: 2006S
 
-Teaching Assistant, \textit{Introductory Psychology} [U], University of South Carolina: 2005F, 2006S \\
+Supplemental Instruction Leader, \textit{Introductory Psychology} [U], University of South Carolina: 2005F, 2006S \\
 
 \end{hangparas}
 
@@ -752,7 +789,7 @@ Postdoctoral Fellows, as primary or co-primary mentor: \\  [.1cm]
 \hspace{.5in} \= Dr. Jacob \= Stanley (2025-present). \\ 
 
 \>  Dr. Rita Ludwig (2022-2023), \\ 
-\> \> Data Scientist at UPenn. \\ [.9cm]
+\> \> Data Scientist at UPenn. \\ [.2cm]
 
 
 Graduate students, as primary or co-primary mentor: \\  [.1cm]
@@ -764,8 +801,8 @@ Graduate students, as primary or co-primary mentor: \\  [.1cm]
 \> Melanie Kos (2023-present, co-mentored with Helion), Ph.D. in Psychology (CNS), expected 2028 \\ 
 \> Tia Tropea (2023-2024), Master's in Psychology, \\ 
 \> \> Research Coordinator at UPenn. \\ 
-\> James Wyngaarden (2020-present), Ph.D. in Psychology (Social), expected 2025 \\
-\> Yi (Jen) Yang (2020-present), Ph.D. in Psychology (CNS), expected 2025 \\
+\> James Wyngaarden (2020-present), Ph.D. in Psychology (Social), expected 2026 \\
+\> Yi (Jen) Yang (2020-present), Ph.D. in Psychology (CNS), expected 2026 \\
 \> Dr. Xinxu (Karen) Shen (2019-2024, co-mentored with Murty), Ph.D. in Psychology (CNS), \\
 \> \> Postdoc at UC-Riverside. \\ 
 \> Dr. Daniel Sazhin (2019-2024), Ph.D. in Psychology (CNS), \\
@@ -895,6 +932,17 @@ Jane Gaisinsky, Liberal Arts Undergraduate Research Award, for \textit{Altering 
 
 \section*{Recent Conference Presentations (selected)}
 \label{sec:conferences}
+
+
+\subsection*{2026}
+\begin{hangparas}{.5in}{1}
+
+Tassoni MB, Kaplan M, Tony-Ogbata Z, Patel S, \textbf{Smith DV}, Murty V, Giovannetti T (2026). Differential effects of motivation and novelty on memory in aging. Poster presented at the International Neuropsychological Society Conference, Philadelphia, PA, USA.
+
+Stanley JM, Kos M, Sazhin D, Helion C, Giovannetti T, Fareri D, \textbf{Smith DV} (2026). Neural mechanisms of fairness and financial exploitation risk across the adult lifespan. Poster presented at the International Neuropsychological Society Conference, Philadelphia, PA, USA. \\
+
+\end{hangparas}
+
 
 \subsection*{2025}
 \begin{hangparas}{.5in}{1}
@@ -1144,7 +1192,7 @@ Please contact me directly for conference presentations prior to 2016.
 % ---- PLEASE LEAVE THIS BACKLINK FOR ATTRIBUTION AS PER CC-LICENSE
 Typeset in \href{http://nitens.org/taraborelli/cvtex}{\XeTeX} •\- Source code on \href{https://github.com/DVSneuro/my-cv}{GitHub}\\
 % ---- FILL IN THE FULL URL TO YOUR CV HERE
-\href{https://liberalarts.temple.edu/sites/liberalarts/files/SmithDV\_vita.pdf}{https://liberalarts.temple.edu/sites/liberalarts/files/SmithDV\_vita.pdf}}
+\href{https://github.com/DVSneuro/my-cv/blob/master/smith\_cv.pdf}{https://liberalarts.temple.edu/sites/liberalarts/files/SmithDV\_vita.pdf}}
 \end{center}
 
 \end{document}
