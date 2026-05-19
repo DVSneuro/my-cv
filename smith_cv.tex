@@ -46,12 +46,28 @@
 \newcommand{\preregistration}[1]{\href{#1}{\scriptsize\textsc{[PreRegistration]}}}
 
 % ---- MARGIN YEARS
-\usepackage{marginnote}
-\newcommand{\amper{}}{\chardef\amper="E0BD }
-\newcommand{\years}[1]{\marginnote{\scriptsize #1}}
-\renewcommand*{\raggedleftmarginnote}{}
-\setlength{\marginparsep}{7pt}
-\reversemarginpar
+%\usepackage{marginnote}
+%\newcommand{\amper{}}{\chardef\amper="E0BD }
+%\newcommand{\years}[1]{\marginnote{\scriptsize #1}}
+%\renewcommand*{\raggedleftmarginnote}{}
+%\setlength{\marginparsep}{7pt}
+%\reversemarginpar
+
+
+% ---- MARGIN YEARS
+\newlength{\yearcolwidth}
+\setlength{\yearcolwidth}{0.55in}
+
+\newlength{\yeargap}
+\setlength{\yeargap}{0.15in}
+
+\newcommand{\years}[1]{%
+  \leavevmode\makebox[0pt][r]{%
+    \makebox[\yearcolwidth][l]{\scriptsize #1}%
+    \hspace{\yeargap}%
+  }%
+}
+
 
 % HEADINGS
 \usepackage{sectsty} 
@@ -178,6 +194,7 @@ email: \href{mailto:david.v.smith@temple.edu}{david.v.smith@temple.edu} \> {\faI
 %\hrule \section*{Honors \& Awards}
 \section*{Honors and Awards}
 \noindent
+\years{2026}Fellow, Social \& Affective Neuroscience Society \\
 \years{2025}Presidential Faculty Award, College of Liberal Arts, Temple University \\
 \years{2025}Fellow, Association for Psychological Science\\
 \years{2022}Open \& Reproducible Science Award, Society for Social Neuroscience\\
@@ -213,9 +230,11 @@ email: \href{mailto:david.v.smith@temple.edu}{david.v.smith@temple.edu} \> {\faI
 \subsection*{Active}
 \begin{hangparas}{.5in}{1}
 
-\years{2021-2026} Social Reward Processing Across the Lifespan: Identifying Risk Factors for Financial Exploitation. (NIH R01-AG067011; *\$3,419,480). Principal Investigator, with Co-Is Giovannetti, Jarcho, and Olson.
+\years{2026-2027} Depressive Symptom Severity as a Moderator of Transcranial Electrical Stimulation Effects on Reward Processing. (Blue Sky Grant from the Office of the Vice President for Research at Temple University; *\$100,000). Principal Investigator, with Co-I Olino.
 
-\years{2024-2026} Social Reward Processing Across the Lifespan: Identifying Risk Factors for Financial Exploitation Diversity Supplement. (NIH 3R01AG067011-02S1; *\$120,411). Diversity Supplement supporting Melanie Kos. \\
+\years{2021-2027} Social Reward Processing Across the Lifespan: Identifying Risk Factors for Financial Exploitation. (NIH R01-AG067011; *\$3,419,480). Principal Investigator, with Co-Is Giovannetti, Jarcho, and Olson.
+
+\years{2024-2027} Social Reward Processing Across the Lifespan: Identifying Risk Factors for Financial Exploitation Diversity Supplement. (NIH 3R01AG067011-02S1; *\$120,411). Diversity Supplement supporting Melanie Kos. \\
 
 \end{hangparas}
 
@@ -228,7 +247,8 @@ email: \href{mailto:david.v.smith@temple.edu}{david.v.smith@temple.edu} \> {\faI
 
 \years{2026-2030} Environmental and Neural Drivers of Adolescent Cannabis Use. (NIH R01-DA066736 *\$2,661,323). Principal Investigator, with MPI Mennis and Co-I Olino. [Submitted December 2025] 
 
-\years{2025-2030} Modulating Reward Processing with Transcranial Electrical Stimulation. (NIH R01-DA063106; *\$3,902,693). Principal Investigator, with MPI Krekelberg and Co-Is Alloy and Weinstein. [Submitted August 2024] \\
+\years{2026-2031} Selective Neuromodulation of Corticostriatal Reward Circuits with tACS/tDCS. (NIH R01-DA067390; *\$4,561,353). Principal Investigator, with Co-Is Krekelberg, Alloy and Olino. [Submitted February 2026] \\
+
 
 \end{hangparas}
 
@@ -241,7 +261,7 @@ email: \href{mailto:david.v.smith@temple.edu}{david.v.smith@temple.edu} \> {\faI
 
 \years{2017-2021} Remote Modulation of Reward Circuits with Noninvasive Brain Stimulation. (NIH R21-MH113917; *\$420,000). Principal Investigator, with Co-I Krekelberg.
 
-\years{2018-2019} Modulating Individual Differences in Reward Sensitivity with Transcranial Current Stimulation. Targeted Small Grant Award from the Office of the Vice President for Research at Temple University; †\$10,000). Principal Investigator, with Co-I Reilly.
+\years{2018-2019} Modulating Individual Differences in Reward Sensitivity with Transcranial Current Stimulation. (Targeted Small Grant Award from the Office of the Vice President for Research at Temple University; †\$10,000). Principal Investigator, with Co-I Reilly.
 
 \years{2017-2018} Social Reward and Aging: Identifying the Neural Underpinnings of Peer Influences. Pilot Grant from the Scientific Research Network on Decision Neuroscience \& Aging; †\$30,000). Principal Investigator, with Co-Is Fareri, Giovannetti, and Reeck. [Subaward of NIH R24-AG054355 (PI Samanez-Larkin)]
 
@@ -269,7 +289,7 @@ email: \href{mailto:david.v.smith@temple.edu}{david.v.smith@temple.edu} \> {\faI
 
 \years{2023-2028} Ultraprocessed food addiction, hunger, and the frontal pole/medial orbitofrontal cortex in young adults. (NIH R01; *\$3,691,273). Co-Investigator, with PI Eunice Chen (Temple University).
 
-\years{2023-2028} An inverse developmental gradient of cerebellar modulation of social behavior. (NIH R01 *\$2,555,330) Co-Investigator, with PI Ingrid Olson (Temple University).
+\years{2023-2028} An inverse developmental gradient of cerebellar modulation of social behavior. (NIH R01 *\$2,555,330) Co-Investigator, with PI Ingrid Olson (Temple University). \\
 
 
 \end{hangparas}
@@ -288,7 +308,7 @@ email: \href{mailto:david.v.smith@temple.edu}{david.v.smith@temple.edu} \> {\faI
 
 % PUBLICATIONS
 \section*{Bibliography}
-\aiGoogleScholar \hspace{.01cm} \href{https://scholar.google.com/citations?user=czV7OcQAAAAJ&hl=en}{scholar.google.com}: h-index: 31; i10-index: 54; total citations: 5889 \\ 
+\aiGoogleScholar \hspace{.01cm} \href{https://scholar.google.com/citations?user=czV7OcQAAAAJ&hl=en}{scholar.google.com}: h-index: 34; i10-index: 55; total citations: 6251 \\ 
 \lbrack*co-first authors; †trainee under my supervision; \^{}co-senior authors] \\ 
 
 \textit{Where possible, I include links to \href{https://neurovault.org}{NeuroVault} maps, open materials, open data, and preregistrations.}
@@ -298,39 +318,51 @@ email: \href{mailto:david.v.smith@temple.edu}{david.v.smith@temple.edu} \> {\faI
 
 \begin{hangparas}{.5in}{1}
 
+Wang S†, Yang Y†, Sharp CJ†, Fareri D, Chein J, \textbf{Smith DV}. Striatal Social Reward Sensitivity Predicts Trust-Related Brain Responses Depending on Closeness and Depression. Preprint available on \biorxiv{https://doi.org/10.64898/2026.03.27.714332}.
 
-Mattoni M†, Wang S†, Sharp CJ†, Olino TM, \textbf{Smith DV}. Precision Imaging for Intraindividual Investigation of the Reward Response. Preprint available on \biorxiv{https://doi.org/10.1101/2025.09.26.678878}.
+Kos MC†, Yang Y†, Helion C, \textbf{Smith DV}. Differences in Other-Directed Emotion Regulation Tracks Connectivity Between Amygdala and Prefrontal Regions During Fairness Decisions. Preprint available on \biorxiv{https://doi.org/10.64898/2026.05.14.724908}.
 
-Yang Y†, Ludwig RM†, Wyngaarden JB†, Dwamena D†, Hackett K, Giovannetti T, Fareri DS, \textbf{Smith DV}. Older Adults Show Altered Network Connectivity during Fairness Decisions with Similar and Dissimilar Partners. Preprint available on \biorxiv{https://doi.org/10.1101/2025.08.13.670194}.
+Dejoie JM, Ruiz M, Sokol-Hessner P, Gallardo S, \textbf{Smith DV}, Fareri DS. The Price of Rejection: How Social Feedback Influences Spending on Social Experiences. Preprint available on \psyarxiv{https://doi.org/10.31234/osf.io/jpf7e_v1}.
 
-\textbf{Smith DV}, Fareri DS, Dobryakova E. Contributions of default mode network to subjective valuation and maladaptive decision making. Preprint available on \psyarxiv{https://doi.org/10.31234/osf.io/zrd5b_v1}.
+Ruiz M, Stasiak J, Sokol-Hessner P, \textbf{Smith DV}, Fareri DS. Social Cognitive Functioning Relates to Willingness to Pay for Social Experiences. Preprint available on \psyarxiv{https://doi.org/10.31234/osf.io/76qfx_v1}.
+
+\textbf{Smith DV}, Wyngaarden JB†, Weinstein SM, Illenberger N, Liu Y, Siegel J, Krekelberg B. α-tACS Modulates Reward-Dependent Pupil Responses and Corticostriatal Connectivity. Preprint available on \biorxiv{https://doi.org/10.64898/2026.01.30.702963}
+
+Fareri DS, Yang Y†, Ludwig RM†, Wyngaarden JB†, Dwamena D†, Hackett K, Giovannetti T, \textbf{Smith DV}. Older Adults Show Altered Network Connectivity during Fairness Decisions with Similar and Dissimilar Partners. Preprint available on \biorxiv{https://doi.org/10.1101/2025.08.13.670194}.
 
 Popal H, Quarmley M, \textbf{Smith DV}, Jarcho J, Olson IR. The Cerebellum and Striatum in Reward Processing: Caring About Being Right vs. Caring About Reward. Preprint available on \biorxiv{https://doi.org/10.1101/2025.06.04.657253}.
 
-Dwamena D†*, Stanley JM†*, Wyngaarden JB†, Kos M†, Sharp C†, Jarcho JM, Fareri DS, \textbf{Smith DV}. Neural and Behavioral Responses to Social Norm Violations Across Trust and Fairness Contexts. Preprint available on \biorxiv{https://doi.org/10.1101/2025.11.20.689349}.
+Stanley JM†*, Dwamena D†*, Wyngaarden JB†, Kos M†, Jarcho JM, Fareri DS, \textbf{Smith DV}. Neural and Behavioral Responses to Social Norm Violations Across Trust and Fairness Contexts. Preprint available on \biorxiv{https://doi.org/10.1101/2025.11.20.689349}.
 
 Sazhin D†, Helion C, Murty V, \textbf{Smith DV}. Sunk Cost Fallacy Is Associated With Biased Predictions. Preprint available on \psyarxiv{https://doi.org/10.31219/osf.io/2kxmq_v1}.
 
 Shah S†*, Dennison JB†*, Wyngaarden JB†, Clithero JA, \textbf{Smith DV}. Ambiguity Preferences Are Distinct from Beliefs About Risk. Preprint available on \psyarxiv{https://doi.org/10.31234/osf.io/wrej8_v2}.
 
-Yang Y† \& \textbf{Smith DV}. Structure-Trait-Identity Relation (STIR): An Integrative Framework for Understanding Redistribution Decisions in Economic Games. Preprint available on \psyarxiv{https://osf.io/preprints/psyarxiv/43nvt}.
+Shen X†, Wang KS, Murty VP, Delgado MR, \textbf{Smith DV}. Differential representations for affective and informative components of reward in the striatum and hippocampus. Preprint available on \biorxiv{https://doi.org/10.1101/2024.09.20.614186}. \materials{https://github.com/KarenShen21/ru-highres} \preregistration{https://aspredicted.org/DKZ_W5Y} \\
 
-Shen X†, Wang KS, Murty VP, Delgado MR, \textbf{Smith DV}. Differential representations for affective and informative components of reward in the striatum and hippocampus. Preprint available on \biorxiv{https://doi.org/10.1101/2024.09.20.614186}. \materials{https://github.com/KarenShen21/ru-highres}. \preregistration{https://aspredicted.org/DKZ_W5Y}
-
-\textbf{Smith DV}*, Zaff O*, Wyngaarden JB†, Dennison JB†, Sazhin D†, Chein J, Alloy LB, McCloskey M, Jarcho JM, Fareri D. Social Closeness and Reward Sensitivity Enhance Corticostriatal Function during Experiences of Shared Rewards. Preprint available on \biorxiv{https://doi.org/10.1101/2023.10.19.562908}. \neurovault{https://neurovault.org/collections/15006/} \materials{https://github.com/DVS-Lab/istart-sharedreward} \data{https://openneuro.org/datasets/ds004920} \preregistration{https://aspredicted.org/blind.php?x=SFX_MXL} \\
 
 
 \end{hangparas}
 
-\subsection*{Peer-Reviewed Journal Articles}
+\subsection*{Journal Articles}
 
 \begin{hangparas}{.5in}{1}
 
-[72] Wyngaarden JB†*, Nambiar A†*, Dennison J†, Alloy LB, Fareri DS, Jarcho JM, \textbf{Smith DV} (2026, in press). Trait reward sensitivity and behavioral motivation shape connectivity between the default mode network and the striatum during reward anticipation. \textit{Cognitive, Affective, and Behavioral Neuroscience}. Preprint available on \biorxiv{https://doi.org/10.1101/2025.04.17.649386}.
+[77] \textbf{Smith DV}, Fareri DS, Dobryakova E (2026, in press). Contributions of default mode network to subjective valuation and maladaptive decision making. \textit{Current Opinion in Behavioral Sciences}. \doi{https://doi.org/10.1016/j.cobeha.2026.101658} 
 
-[71] Kilcullen MR, Luistro JN, Kos M, Mennis J, Smith DV, Olson IR (2025). Air pollution and impulsive choice in aging: evidence from delay discounting. \textit{GeroScience}. \doi{https://doi.org/10.1007/s11357-025-01906-0}
+[76] Stanley JM† \& \textbf{Smith DV} (2026, in press). Fraud in the Age of AI: Commentary on The Scammers’ Psychological Warfare. \textit{Psychological Science in the Public Interest}. 
 
-[70] Wyngaarden JB†*, Yang Y†*, Dennison JB†*, \textbf{Smith DV}. A dataset of risky and ambiguous decisions using a novel Linked Colored Lottery Task across two studies. \textit{Data Brief}, 61, 111844. \doi{https://doi.org/10.1016/j.dib.2025.111844} \materials{https://github.com/DVS-Lab/risk-ambiguity-DataInBrief} \data{https://doi.org/10.5281/zenodo.15122334}
+[75] Luistro J-N†, Kos MC†, Sharp CJ†, Kilcullen MR, Dachs A†, James I†, Hawk AD†, Mennis J, Olson IR, \textbf{Smith DV}. Association of Air Pollution and Socioeconomic Deprivation with Depression and Pain (2026). \textit{International Journal of Environmental Research and Public Health}, 23(5), 543. \doi{https://doi.org/10.3390/ijerph23050543}
+
+[74] Mattoni M†, Wang S†, Sharp CJ†, Olino TM, \textbf{Smith DV} (2026). Precision Imaging for Intraindividual Investigation of the Reward Response. \textit{Human Brain Mapping}, 47(5), e70512. \doi{https://doi.org/10.1002/hbm.70512} \data{https://openneuro.org/datasets/ds006707}
+
+[73] \textbf{Smith DV}*, Zaff O*, Wyngaarden JB†, Dennison JB†, Sazhin D†, Chein J, Alloy LB, McCloskey M, Jarcho JM, Fareri D (2026). Social Closeness and Reward Sensitivity Enhance Corticostriatal Function during Experiences of Shared Rewards. \textit{Biological Psychology}, 204, 109209. \doi{https://doi.org/10.1016/j.biopsycho.2026.109209} \neurovault{https://neurovault.org/collections/15006/} \materials{https://github.com/DVS-Lab/istart-sharedreward} \data{https://openneuro.org/datasets/ds004920} \preregistration{https://aspredicted.org/blind.php?x=SFX_MXL} 
+
+[72] Wyngaarden JB†*, Nambiar A†*, Dennison J†, Alloy LB, Fareri DS, Jarcho JM, \textbf{Smith DV} (2026). Trait reward sensitivity and behavioral motivation shape connectivity between the default mode network and the striatum during reward anticipation. \textit{Cognitive, Affective, and Behavioral Neuroscience}. \doi{https://doi.org/10.3758/s13415-025-01396-9} \data{https://openneuro.org/datasets/ds004920} 
+
+[71] Kilcullen MR, Luistro JN, Kos M, Mennis J, \textbf{Smith DV}, Olson IR (2025). Air pollution and impulsive choice in aging: evidence from delay discounting. \textit{GeroScience}. \doi{https://doi.org/10.1007/s11357-025-01906-0}
+
+[70] Wyngaarden JB†*, Yang Y†*, Dennison JB†*, \textbf{Smith DV} (2025). A dataset of risky and ambiguous decisions using a novel Linked Colored Lottery Task across two studies. \textit{Data Brief}, 61, 111844. \doi{https://doi.org/10.1016/j.dib.2025.111844} \materials{https://github.com/DVS-Lab/risk-ambiguity-DataInBrief} \data{https://doi.org/10.5281/zenodo.15122334}
 
 [69] Tropea T†, Yang Y†, Ludwig R, Fareri DS, Mennis J, \& \textbf{Smith DV} (2025). Reduced community-level social cohesion is associated with higher risk for financial exploitation. \textit{Aging and Mental Health}, 1-14. \doi{https://doi.org/10.1080/13607863.2025.2533493} \preregistration{https://doi.org/10.17605/OSF.IO/86XHK}
 
@@ -482,9 +514,9 @@ Shen X†, Wang KS, Murty VP, Delgado MR, \textbf{Smith DV}. Differential repres
 
 [6] \textbf{Smith DV} and Huettel SA (2026, forthcoming). Functional MRI (fMRI). In G. Tranter and D. Le Pevelen (Eds.) \textit{Encyclopedia of Spectroscopy and Spectrometry}, 4th edition.
 
-[5]  \textbf{Smith DV}, Lockwood P, Fareri DS (Eds.). (2026, forthcoming). \textit{Neuroeconomics: Core Topics and Current Directions}. Springer Nature.
+[5]  \textbf{Smith DV}, Lockwood P, Fareri DS (Eds.). (2026). \textit{Neuroeconomics: Core Topics and Current Directions}. Springer Nature. \doi{https://doi.org/10.1007/978-3-032-02925-6}
 
-[4] Wyngaarden J, Giovannetti T, Krekelberg B, \textbf{Smith DV} (2026). Maladaptive decision making in older adults: Confirmation bias and financial exploitation. In D. V. Smith, P. Lockwood, D. S. Fareri (Eds.), \textit{Neuroeconomics: Core Topics and Current Directions}. Springer Nature. Preprint available on \psyarxiv{https://osf.io/preprints/psyarxiv/abnyd}
+[4] Wyngaarden J, Giovannetti T, Krekelberg B, \textbf{Smith DV} (2026). Maladaptive decision making in older adults: Confirmation bias and financial exploitation. In D. V. Smith, P. Lockwood, D. S. Fareri (Eds.), \textit{Neuroeconomics: Core Topics and Current Directions}. Springer Nature. \doi{https://doi.org/10.1007/978-3-032-02925-6_30}
 
 [3] Ludwig RM† \& \textbf{Smith DV} (2023). Financial Fraud among Older Americans: Evidence and Implications. \textit{Temple University Public Policy Lab, Policy Brief}, 20, 1-5. \doi{https://doi.org/10.31234/osf.io/9f8ha}
 
@@ -554,7 +586,7 @@ Shen X†, Wang KS, Murty VP, Delgado MR, \textbf{Smith DV}. Differential repres
 \years{2015-2017}Review Editor, \textit{Frontiers in Neuroscience}, section Decision Neuroscience. \\
 
 
-Ad Hoc Reviewer for 103 journals:
+Ad Hoc Reviewer for 106 journals:
 \begin{multicols}{2}
 \begin{itemize}[noitemsep]
 \itshape
@@ -573,6 +605,7 @@ Ad Hoc Reviewer for 103 journals:
 \item Behavioral Neuroscience
 \item Brain
 \item Brain and Behavior
+\item Brain and Cognition
 \item Brain Communications
 \item Brain Imaging and Behavior
 \item Brain Structure and Function
@@ -581,6 +614,7 @@ Ad Hoc Reviewer for 103 journals:
 \item British Journal of Pharmacology
 \item British Journal of Psychology
 \item BMC Neuroscience 
+\item BMC Psychology
 \item Business and Society Review
 \item Cell Reports
 \item Cerebral Cortex 
@@ -609,6 +643,7 @@ Ad Hoc Reviewer for 103 journals:
 \item Human Brain Mapping 
 \item IEEE Transactions on Biomedical Engineering
 \item IEEE Transactions on Neural Systems \& Rehabilitation Engineering
+\item iScience
 \item Imaging Neuroscience
 \item International Journal of Consumer Studies
 \item International Journal of Environmental Research and Public Health
@@ -691,10 +726,11 @@ Awards on \textit{Publons}: Top Reviewers for Neuroscience \& Behavior (2018); T
 \years{2014} Scientific Research Network on Decision Neuroscience \& Aging, Pilot Grants.
 
 \subsection*{College and University Service at Temple University}
+\years{2026-present} Graduate Board (elected). \\ 
 \years{2025-present} Public Policy Lab’s Advisory Board, College of Liberal Arts. \\ 
 \years{2025-present} Teaching Awards Committee, College of Liberal Arts. \\ 
 \years{2025-present} Budget Review Committee, Faculty Senate. \\
-\years{2024-present} Tenure Track Merit Committee (elected), College of Liberal Arts. \\ 
+\years{2024-2026} Tenure Track Merit Committee (elected), College of Liberal Arts. \\ 
 \years{2024-present} Research Programs and Policies Committee (elected; Vice Chair for 2025-26), Faculty Senate. \\
 \years{2017} Subcommittee to evaluate and design deep learning server.
 
@@ -731,7 +767,7 @@ Past and Current Memberships:
 \end{multicols}
 
 Abstract Reviewing: \\ [.1cm]
-Society for Neuroeconomics (2025). \\ 
+Society for Neuroeconomics (2025, 2026). \\ 
 Organization for Human Brain Mapping (2010, 2013-2019, 2021, 2023-2026). \\
 Cognitive Science Society (2017). \\
 
@@ -740,7 +776,6 @@ Leadership and Committee Work: \\ [.1cm]
 \years{2025-present} Partnerships Committee, Social Affective Neuroscience Society \\
 
 
-\pagebreak
 % ----------------------TEACHING------------------------------------------
 \section*{Teaching and Mentoring Activities}
 \subsection*{Teaching Experience}
@@ -793,14 +828,17 @@ Postdoctoral Fellows, as primary or co-primary mentor: \\  [.1cm]
 
 
 Graduate students, as primary or co-primary mentor: \\  [.1cm]
-\> Farhad Shah (2025-present), Master's in Neuroscience (CNS), expected 2026 \\ 
-\> Jamie-Nicole Luistro  (2025-present), Master's in Psychology (CNS), expected 2026 \\ 
-\> Maraimi Sakhiashvili (2025-present), Master's in Neuroscience (CNS), expected 2026 \\ 
+\> Rebecca Reyes (2026-present), Master's in Neuroscience, expected 2027 \\ 
+\> Katie Rodman (2025-present), Master's in Neuroscience, expected 2027 \\ 
+\> Farhad Shah (2025-2026), Master's in Neuroscience. \\ 
+\> Jamie-Nicole Luistro  (2025-2026), Master's in Psychology. \\ 
+\> Maraimi Sakhiashvili (2025-2026), Master's in Neuroscience, \\ 
+\> \> Research Coordinator at UPenn. \\ 
 \> Derrick Dwamena (2024-present), Ph.D. in Psychology (CNS), expected 2029 \\ 
 \> Shenghan Wang (2024-present, co-mentored with Chein), Ph.D. in Psychology (CNS), expected 2029 \\ 
 \> Melanie Kos (2023-present, co-mentored with Helion), Ph.D. in Psychology (CNS), expected 2028 \\ 
 \> Tia Tropea (2023-2024), Master's in Psychology, \\ 
-\> \> Research Coordinator at UPenn. \\ 
+\> \> PhD Student at Drexel. \\ 
 \> James Wyngaarden (2020-present), Ph.D. in Psychology (Social), expected 2026 \\
 \> Yi (Jen) Yang (2020-present), Ph.D. in Psychology (CNS), expected 2026 \\
 \> Dr. Xinxu (Karen) Shen (2019-2024, co-mentored with Murty), Ph.D. in Psychology (CNS), \\
@@ -815,7 +853,11 @@ Graduate students, as primary or co-primary mentor: \\  [.1cm]
 \> \> Ph.D. student at Dartmouth. \\ [.2cm]
 
 Graduate students (other), as committee member or secondary mentor: \\  [.1cm]
+\> Linda Hoffman (2026-present, CNS) \\
+\> Nattawat Theeralerttham (2026, Fox School of Business) \\
+\> Dr. Allison Langer (2026, CNS) \\
 \> Nicole Lalta (2025-present, Rutgers-Newark University) \\
+\> Dr. Sophia Holmquist (2025-2026, Clinical Psychology) \\
 \> Dr. Matthew Mattoni (2021-2025, Clinical Psychology) \\
 \> Dr. Molly Tassoni (2024-2025, Clinical Psychology) \\
 \> Dr. Talia Naiman (2025, Adelphi University) \\
@@ -833,7 +875,7 @@ Graduate students (other), as committee member or secondary mentor: \\  [.1cm]
 \> Dr. Corinne Bart (2019-2021, Clinical Psychology) \\
 \> Dr. Tommy Ng (2017-2020, Clinical Psychology) \\
 \> Nicole Henninger (2018-2019, Communications) \\
-\> Dr. Sangsuk Yoon (2018, Business School) \\
+\> Dr. Sangsuk Yoon (2018, Fox School of Business) \\
 \> Dr. William Hampton (2017-2018) \\
 \> Dr. Ashley Drew (2017) \\
 \> Dr. Kylie Alm (2017) \\
@@ -876,6 +918,10 @@ Prior trainees\footnote{These were individuals who I mentored in neuroimaging an
 \subsection*{Selected Student Awards}
 
 \begin{hangparas}{.5in}{1}
+
+Puja Saha, Liberal Arts Undergraduate Research Award, for \textit{Modulating Frontal Brain Activity to Improve Impulse Control in Frequent Gamblers} (Fall 2026).
+
+Ryan Gephart, Liberal Arts Undergraduate Research Award, for \textit{Tracking Changes in Social Reward Sensitivity and Financial Exploitation Risk in Aging} (Spring 2026).
 
 Arunachalam Lakshmanan, Liberal Arts Undergraduate Research Award, for \textit{Understanding Social Reward and Self-Control in Online Gambling Risk} (Fall 2025).
 
@@ -937,7 +983,27 @@ Jane Gaisinsky, Liberal Arts Undergraduate Research Award, for \textit{Altering 
 \subsection*{2026}
 \begin{hangparas}{.5in}{1}
 
-Tassoni MB, Kaplan M, Tony-Ogbata Z, Patel S, \textbf{Smith DV}, Murty V, Giovannetti T (2026). Differential effects of motivation and novelty on memory in aging. Poster presented at the International Neuropsychological Society Conference, Philadelphia, PA, USA.
+Sakiashvili M, Sharp CJ, Lakshmanan A, Fareri D, \textbf{Smith DV} (2026). Social Connection in Problem Gambling: Loneliness, Reward Sensitivity, and Neural Responses to Trust Reciprocation. Poster presented at the Society of Biological Psychiatry Conference, New York, NY, USA.
+
+Stanley JM, Sazhin D, Giovannetti T, Fareri D, \textbf{Smith DV} (2026). Financial exploitation vulnerability is reflected in divergent prefrontal responses to social unfairness. Poster to be presented at the Society for Neuroeconomics conference, Pasadena, CA, USA.
+
+Dwamena D, Sharp C, Venkatraman V, \textbf{Smith DV} (2026). Neural and behavioral responses to gambling-related advertisements. Poster to be presented at the annual meeting of the Society for Neuroeconomics, Pasadena, CA, USA.
+
+Luistro J-N, Kos M, Sharp CJ, Rodman K, Giovannetti T, Mennis J, Olson IR, Jarcho J, Helion C, \textbf{Smith DV} (2026). Association of white matter hyperintensities with sensitivity to social reward. Poster presented at the Association for Psychological Science conference, Barcelona, Spain.
+
+Gephart RS, Sharp CJ, Dachs A, Wyngaarden JB III, Jarcho J, \textbf{Smith DV} (2026). Characterizing age-related differences in responses to social reward and risk for financial exploitation. Poster presented at the Association for Psychological Science conference, Barcelona, Spain.
+
+Wang S, Yang Y, Sharp CJ, Fareri D, Chein J, \textbf{Smith DV} (2026). Striatal sensitivity to shared reward interacts with closeness and depression during social reciprocity. E-poster presented at the Society of Biological Psychiatry conference, New York, NY, USA.
+
+Mattoni M, Wang S, Sharp CJ, Olino T, \textbf{Smith DV} (2026). Precision imaging for intraindividual investigation of mood and the reward response. Poster presented at the Society of Biological Psychiatry conference, New York, NY, USA.
+
+Stanley JM, Kos M, Sazhin D, Helion C, Giovannetti T, Fareri D, \textbf{Smith DV} (2026). Neural mechanisms of fairness and financial exploitation risk across the adult lifespan. Poster presented at the Social \& Affective Neuroscience Society meeting, San Diego, CA, USA.
+
+Tassoni MB, Kaplan M, Tony-Ogbata Z, Patel S, \textbf{Smith DV}, Murty V, Giovannetti T (2026). Differential effects of motivation and novelty on memory in aging. Poster presented at the International Neuropsychological Society conference, Philadelphia, PA, USA.
+
+Gephart RS, Sharp CJ, Dachs A, Wyngaarden JB III, Jarcho J, \textbf{Smith DV} (2026). Characterizing age-related differences in responses to social reward and risk for financial exploitation. Poster presented at the Society for Personality and Social Psychology Conference, Chicago, IL, USA.
+
+Luistro J-N, Kos M, Sharp CJ, Kilcullen MR, Dachs A, James I, Hawk AD, Mennis J, Olson IR, \textbf{Smith DV} (2026). Associations of air pollution and socioeconomic deprivation with depression and pain. Poster presented at the Society for Personality and Social Psychology Conference, Chicago, IL, USA.
 
 Stanley JM, Kos M, Sazhin D, Helion C, Giovannetti T, Fareri D, \textbf{Smith DV} (2026). Neural mechanisms of fairness and financial exploitation risk across the adult lifespan. Poster presented at the International Neuropsychological Society Conference, Philadelphia, PA, USA. \\
 
@@ -947,15 +1013,15 @@ Stanley JM, Kos M, Sazhin D, Helion C, Giovannetti T, Fareri D, \textbf{Smith DV
 \subsection*{2025}
 \begin{hangparas}{.5in}{1}
 
-Dwamena D, Wyngaarden J, Kos M, Sharp C, Yang J, Jarcho J, Fareri D, \textbf{Smith DV} (April, 2025). Dorsal anterior cingulate responses to unreciprocated trust are associated with neural responses to unfairness. Poster presented at The Social \& Affective Neuroscience Society. Chicago, IL, USA
+Dwamena D, Wyngaarden J, Kos M, Sharp C, Yang J, Jarcho J, Fareri D, \textbf{Smith DV} (April, 2025). Dorsal anterior cingulate responses to unreciprocated trust are associated with neural responses to unfairness. Poster presented at The Social \& Affective Neuroscience Society conference. Chicago, IL, USA
 
-Kos M, Sazhin D, Yang Y, Mennis J, Helion C, \textbf{Smith DV} (April, 2025). Emotion regulation strategies moderate the association between anterior insula responses to fairness and relative deprivation. Poster presented at The Social \& Affective Neuroscience Society. Chicago, IL, USA.
+Kos M, Sazhin D, Yang Y, Mennis J, Helion C, \textbf{Smith DV} (April, 2025). Emotion regulation strategies moderate the association between anterior insula responses to fairness and relative deprivation. Poster presented at The Social \& Affective Neuroscience Society conference. Chicago, IL, USA.
 
-Wyngaarden JB, Nambiar A, Dennison JB, Alloy LB, Fareri DS, Jarcho JM, \textbf{Smith DV} (April, 2025). Trait reward sensitivity and motivation shape connectivity between the default mode network and the striatum during reward anticipation. Poster presented at the Social \& Affective Neuroscience Society. Chicago, IL, USA.
+Wyngaarden JB, Nambiar A, Dennison JB, Alloy LB, Fareri DS, Jarcho JM, \textbf{Smith DV} (April, 2025). Trait reward sensitivity and motivation shape connectivity between the default mode network and the striatum during reward anticipation. Poster presented at the Social \& Affective Neuroscience Society conference. Chicago, IL, USA.
 
-O'Sullivan A, Dachs A, Sharp C, Skudlarek R, Mattheiss S, Zarabba J, Foster E, \textbf{Smith DV} (March, 2025). Preterm Birth and ADHD: Characterizing the Interactive Roles of Screentime, Neighborhood Disadvantage, and Social Support. Poster presented at the Eastern Psychological Association. New York, NY, USA.
+O'Sullivan A, Dachs A, Sharp C, Skudlarek R, Mattheiss S, Zarabba J, Foster E, \textbf{Smith DV} (March, 2025). Preterm Birth and ADHD: Characterizing the Interactive Roles of Screentime, Neighborhood Disadvantage, and Social Support. Poster presented at the Eastern Psychological Association meeting. New York, NY, USA.
 
-Clarence H, Sharp C, Skudlarek R, Kos M, Mattheiss S, Mennis J, \textbf{Smith DV} (March, 2025). Does Area Deprivation Index moderate the relationship between Amygdala Reactivity and Social Support? Poster presented at the Eastern Psychological Association. New York, NY, USA.
+Clarence H, Sharp C, Skudlarek R, Kos M, Mattheiss S, Mennis J, \textbf{Smith DV} (March, 2025). Does Area Deprivation Index moderate the relationship between Amygdala Reactivity and Social Support? Poster presented at the Eastern Psychological Association meeting. New York, NY, USA.
 
 \textbf{Smith DV} and Krekelberg B (February, 2025). tDCS over VLPFC modulates the exploit-explore tradeoff in a two-armed bandit task.  Poster presented at the Brain Stimulation meeting. Kobe, Japan. \\
 
@@ -968,7 +1034,7 @@ Clarence H, Sharp C, Skudlarek R, Kos M, Mattheiss S, Mennis J, \textbf{Smith DV
 
 Yang Y, Sazhin D, Wyngaarden III JB, Clithero J, \textbf{Smith DV} (November, 2024). Evidence Accumulation Rate Mediates the Links between Decision Strategy and Decision Maker’s Reward Sensitivity and Trait Emotional Intelligence. Poster at the Society for Judgment and Decision Making meeting. New York, NY, USA.
 
-Sazhin D, Chelsea H, Murty V, \textbf{Smith DV} (November, 2024). Effects of Trends in Information on Predictive Judgments. Poster presented at the Society for Judgment and Decision Making. New York, NY, USA.
+Sazhin D, Chelsea H, Murty V, \textbf{Smith DV} (November, 2024). Effects of Trends in Information on Predictive Judgments. Poster presented at the Society for Judgment and Decision Making meeting. New York, NY, USA.
 
 Sharp CJ, Dachs A, Wyngaarden III J B, Sazhin D, Kohli I, Hawk A, Tropea T, Yanilmaz E, Jarcho J, Giovannetti T, Fareri DS, \textbf{Smith DV} (October, 2024). Age-related differences in neural responses to trust are associated with risk for financial exploitation. Poster presented at the Society for Neuroscience meeting. Chicago, IL, USA.
 
@@ -982,13 +1048,13 @@ Yang Y, Kos MC, Dachs A, Sharp C, Wyngaarden III JB, Sazhin D, Tropea T, Kohli I
 
 Kos MC, Mitchell W, Wyngaarden III JB, Jarcho J, Fareri DS, \textbf{Smith DV}, Helion C (April, 2024). Representations of monetary and social feedback across social and non-social contexts. Poster presented at the Social and Affective Neuroscience Society meeting. Toronto, ON, Canada.
 
-Kohli I, Tropea TR, Yang Y, Landes F, Jarcho JM, \textbf{Smith DV} (March, 2024). Understanding the Role of Anxiety in Planfulness Across the Lifespan. Poster presented at the Eastern Psychological Association Conference. Philadelphia, PA, USA.
+Kohli I, Tropea TR, Yang Y, Landes F, Jarcho JM, \textbf{Smith DV} (March, 2024). Understanding the Role of Anxiety in Planfulness Across the Lifespan. Poster presented at the Eastern Psychological Association conference. Philadelphia, PA, USA.
 
-Tropea TR, Sharp CJ, Dennison J, Mennis J, \textbf{Smith DV} (March, 2024). Understanding Age-Related Risk Behaviors: Neighborhoods, Socioeconomic Deprivation and Social Support. Poster presented at the Eastern Psychological Association Conference. Philadelphia, PA, USA. 
+Tropea TR, Sharp CJ, Dennison J, Mennis J, \textbf{Smith DV} (March, 2024). Understanding Age-Related Risk Behaviors: Neighborhoods, Socioeconomic Deprivation and Social Support. Poster presented at the Eastern Psychological Association conference. Philadelphia, PA, USA. 
 
-Hawk A, Kos M, Seifen C, Helion C, Giovannetti T, Mennis J, Fareri D, \textbf{Smith DV} (March, 2024). White matter hyperintensities and brain-age gap: Assessing environmental and social effects. Poster presented at the Eastern Psychological Association Conference. Philadelphia, PA, USA.
+Hawk A, Kos M, Seifen C, Helion C, Giovannetti T, Mennis J, Fareri D, \textbf{Smith DV} (March, 2024). White matter hyperintensities and brain-age gap: Assessing environmental and social effects. Poster presented at the Eastern Psychological Association conference. Philadelphia, PA, USA.
 
-Tropea TR, Yang Y, Ludwig RM, Fareri DS, Mennis J, \textbf{Smith DV} (March, 2024). Financial Exploitation: Examining associations with Social Support, Need to Belong, and Community-level indicators of Social Cohesion. Poster presented at the American Psychology-Law Society Conference. Los Angeles, CA, USA. \\
+Tropea TR, Yang Y, Ludwig RM, Fareri DS, Mennis J, \textbf{Smith DV} (March, 2024). Financial Exploitation: Examining associations with Social Support, Need to Belong, and Community-level indicators of Social Cohesion. Poster presented at the American Psychology-Law Society conference. Los Angeles, CA, USA. \\
 
 \end{hangparas}
 
